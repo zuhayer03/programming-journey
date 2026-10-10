@@ -44,6 +44,14 @@ I approach development as a systems problem: research the options, design a work
 - **Exploration:** LLMs, AI agents, retrieval-augmented generation, blockchain
 - **Background:** IT support, troubleshooting, networking, technical communication
 
+
+### 🌐 Interactive portfolio & working AI agent
+
+- **[Animated portfolio website source](https://github.com/zuhayer03/programming-journey/tree/main/docs)** — responsive single-page site with a custom particle background, interactive project cards, and reduced-motion support.
+- **[ToolPilot agent](https://github.com/zuhayer03/programming-journey/tree/main/agent)** — runnable Python tool router with a safe calculator, word statistics, TODO extraction, execution traces, and unit tests.
+
+**Website publishing:** GitHub Pages must be enabled for the `main` branch and `/docs` folder in repository Settings → Pages. Once enabled, the site should be available at `https://zuhayer03.github.io/programming-journey/`.
+
 ### 04 / Repository map
 
 | Workspace | What you’ll find |
