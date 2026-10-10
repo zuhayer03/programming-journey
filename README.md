@@ -10,6 +10,13 @@
 
 ---
 
+
+### ◈ Z-SIGMA // Experimental Mission Control
+
+**[Launch the interactive lab (GitHub Pages)](https://zuhayer03.github.io/programming-journey/lab.html)** · **[Inspect lab source](https://github.com/zuhayer03/programming-journey/tree/main/docs)** · **[Read experiment notes](https://github.com/zuhayer03/programming-journey/blob/main/docs/EXPERIMENT.md)**
+
+A cinematic, interactive tool-routing console with local browser demonstrations and session telemetry. **Z-SIGMA is a fictional experiment brand, not an employer or production service.** GitHub Pages must be enabled for the hosted link to work.
+
 ### 01 / The overview
 
 I’m **Zuhayer Alam Faiyaz**, a Computer Science student bringing together programming foundations, IT troubleshooting, and a strong instinct for **finding the right tools to solve difficult problems**.
