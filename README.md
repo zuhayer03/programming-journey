@@ -1,44 +1,70 @@
-# 🚀 Programming Journey | AI-Augmented Development
-
-### Zuhayer Alam Faiyaz
-**Computer Science Student · AI-Augmented Developer · Workflow & Tool Optimization · Java & Python**
-
-I combine a foundation in programming and IT support with strong AI literacy, technical research, and a practical ability to find, evaluate, and integrate tools that make complex work more efficient.
-
-I've previously studied **Java and Python** and am currently **refreshing and strengthening my programming knowledge**, including data structures and algorithms. I am especially interested in how AI-assisted workflows can help developers prototype, debug, research, automate, and deliver better software.
-
-## ⚡ My approach
-- **AI-augmented problem solving:** Use AI tools strategically for exploration, prototyping, debugging assistance, and documentation.
-- **Tool discovery & optimization:** Compare solutions, select suitable tools, and streamline repetitive work.
-- **Technical foundation:** Prior coursework and practice with Java and Python; currently reviewing both.
-- **IT troubleshooting:** Experience supporting hardware, software, and network-related issues.
-- **Continuous learning:** Develop stronger engineering judgment, testing habits, and independent technical depth.
-
-## 🛠️ Skills & interests
-**Programming:** Java, Python (previously studied; currently reviewing)
-
-**Strengths:** AI tool evaluation, prompt design, workflow optimization, technical research, troubleshooting, UI/UX exploration with Figma
-
-**Exploring:** AI agents, LLM applications, retrieval-augmented generation (RAG), blockchain, software engineering
-
-## 🗺️ Development roadmap
-| Focus | Direction |
-| --- | --- |
-| Java & Python refresh | Revisit syntax, OOP, collections, and practical coding |
-| DSA | Strengthen algorithmic thinking and complexity analysis |
-| AI-assisted development | Build reliable workflows with testing and human verification |
-| Software projects | Ship documented applications and improve code quality |
-| AI & blockchain | Explore real-world use cases and prototypes |
-
-## 📂 Repository
-- [Java review](java/README.md)
-- [Python review](python/README.md)
-- [DSA notes](dsa/README.md)
-- [Project ideas and builds](projects/README.md)
-- [Learning log](LEARNING_LOG.md)
-
-## 🎯 What I'm building toward
-I want to combine hands-on software engineering skills with the leverage of modern AI tools: faster iteration, better research, smart automation, and reliable results. AI can accelerate development; understanding, validation, and responsibility still matter.
+<div align="center">
+  <img src="assets/banner.svg" width="100%" alt="Zuhayer Alam Faiyaz — animated developer banner" />
+  <br/>
+  <a href="https://github.com/zuhayer03"><img src="https://img.shields.io/badge/GitHub-zuhayer03-121a30?style=for-the-badge&logo=github&logoColor=white" alt="GitHub profile"/></a>
+  <img src="https://img.shields.io/badge/AI--Augmented-Development-00bfa5?style=for-the-badge" alt="AI-augmented development"/>
+  <img src="https://img.shields.io/badge/Focus-Systems_%26_Automation-8d7cff?style=for-the-badge" alt="Systems and automation"/>
+  <br/><br/>
+  <strong>Computer Science · AI Tool Orchestration · Workflow Optimization · Java & Python · Emerging Technologies</strong>
+</div>
 
 ---
-**Build intelligently. Automate thoughtfully. Keep improving.**
+
+### 01 / The overview
+
+I’m **Zuhayer Alam Faiyaz**, a Computer Science student bringing together programming foundations, IT troubleshooting, and a strong instinct for **finding the right tools to solve difficult problems**.
+
+I approach development as a systems problem: research the options, design a workable flow, use AI intelligently, validate the output, and keep improving. I have studied **Java and Python** and am refreshing both alongside data structures and algorithms.
+
+> **My edge:** combining AI literacy, rapid tool evaluation, and practical workflow design to amplify what I can build.
+
+### 02 / Operating principles
+
+| Discover | Orchestrate | Validate |
+| :-- | :-- | :-- |
+| Research frameworks, APIs, and developer tools | Connect AI assistants, automation, and conventional code | Review assumptions, test behavior, and refine the result |
+| Choose tools based on the actual task | Reduce busywork and shorten iteration cycles | Keep security, maintainability, and clarity in the loop |
+
+<div align="center">
+  <img src="assets/terminal.svg" width="100%" alt="Animated terminal showing current engineering focus"/>
+</div>
+
+### 03 / Technical landscape
+
+<p>
+<img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java"/>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
+<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git"/>
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/>
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white" alt="Figma"/>
+</p>
+
+- **Engineering foundations:** Java, Python, DSA, debugging, software development coursework
+- **AI-assisted engineering:** tool selection, prompt workflows, AI research, prototyping, assisted debugging
+- **Exploration:** LLMs, AI agents, retrieval-augmented generation, blockchain
+- **Background:** IT support, troubleshooting, networking, technical communication
+
+### 04 / Repository map
+
+| Workspace | What you’ll find |
+| :-- | :-- |
+| **[Programming Journey](https://github.com/zuhayer03/programming-journey)** | My programming refresh, DSA notes, learning log, and project progression |
+| **[Java Code](https://github.com/zuhayer03/javaCode)** | Earlier Java coursework and practice |
+
+**Explore this repository:** [Java](java/README.md) · [Python](python/README.md) · [DSA](dsa/README.md) · [Projects](projects/README.md) · [Learning log](LEARNING_LOG.md)
+
+### 05 / Activity signal
+
+<div align="center">
+<img src="https://github-readme-stats.vercel.app/api?username=zuhayer03&show_icons=true&hide_border=true&bg_color=0c1324&title_color=72f6e9&text_color=b8c9df&icon_color=a798ff" height="165" alt="GitHub stats (live third-party image)"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zuhayer03&layout=compact&hide_border=true&bg_color=0c1324&title_color=72f6e9&text_color=b8c9df" height="165" alt="GitHub repository languages (live third-party image)"/>
+</div>
+
+<sub>Activity cards are generated from public GitHub data by an external service, may be delayed, and may occasionally fail to load. They do not measure professional experience.</sub>
+
+---
+
+<div align="center">
+  <h3>Build intelligently. Automate thoughtfully. Ship responsibly.</h3>
+  <sub>Designed to evolve with real projects, code, and measurable engineering outcomes.</sub>
+</div>
