@@ -1,0 +1,28 @@
+# Java build outputs
+*.class
+*.jar
+out/
+target/
+.gradle/
+build/
+
+# Python generated files and environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# IDE/editor files
+.idea/
+.vscode/
+*.iml
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
