@@ -1,47 +1,44 @@
-# 🚀 Programming Journey
+# 🚀 Programming Journey | AI-Augmented Development
 
-Hi, I'm **Zuhayer Alam Faiyaz**, a Computer Science student with a background in IT support and an interest in software engineering, AI, and blockchain.
+### Zuhayer Alam Faiyaz
+**Computer Science Student · AI-Augmented Developer · Workflow & Tool Optimization · Java & Python**
 
-I'm **relearning Java and Python from the beginning**. This repository documents practice, mistakes, improvements, and projects as I build stronger fundamentals. It is a learning log, not a claim of professional proficiency.
+I combine a foundation in programming and IT support with strong AI literacy, technical research, and a practical ability to find, evaluate, and integrate tools that make complex work more efficient.
 
-## 🎯 Learning goals
-1. Rebuild fundamentals: variables, types, input/output, conditions, loops, functions, and debugging.
-2. Practice Java and Python with small, understandable exercises.
-3. Study data structures and algorithms (DSA) step by step.
-4. Learn Git, testing, clean code, and basic project organization.
-5. Build original projects; explore AI and blockchain when ready.
+I've previously studied **Java and Python** and am currently **refreshing and strengthening my programming knowledge**, including data structures and algorithms. I am especially interested in how AI-assisted workflows can help developers prototype, debug, research, automate, and deliver better software.
 
-## 🗺️ Roadmap
-| Stage | Topics | Evidence of progress |
-| --- | --- | --- |
-| 1 · Refresh | Java/Python syntax, conditions, loops, functions | 10 small exercises |
-| 2 · Problem solving | Arrays, strings, methods, recursion basics | Solved problems with explanations |
-| 3 · DSA | Lists, stacks, queues, hash maps, trees, sorting | Implementations and complexity notes |
-| 4 · Software projects | Files, APIs, testing, documentation | Two small functional projects |
-| 5 · Explore | AI applications and blockchain fundamentals | One researched prototype |
+## ⚡ My approach
+- **AI-augmented problem solving:** Use AI tools strategically for exploration, prototyping, debugging assistance, and documentation.
+- **Tool discovery & optimization:** Compare solutions, select suitable tools, and streamline repetitive work.
+- **Technical foundation:** Prior coursework and practice with Java and Python; currently reviewing both.
+- **IT troubleshooting:** Experience supporting hardware, software, and network-related issues.
+- **Continuous learning:** Develop stronger engineering judgment, testing habits, and independent technical depth.
 
-> Stages are milestones, not fixed deadlines. Quality and understanding matter more than speed.
+## 🛠️ Skills & interests
+**Programming:** Java, Python (previously studied; currently reviewing)
 
-## 📂 Repository structure
-- [Java](java/README.md) — fundamentals and DSA practice
-- [Python](python/README.md) — beginner exercises and future automation projects
-- [DSA](dsa/README.md) — concepts, patterns, and complexity
-- [Projects](projects/README.md) — finished or in-progress builds
-- [Learning log](LEARNING_LOG.md) — what I learn each week
+**Strengths:** AI tool evaluation, prompt design, workflow optimization, technical research, troubleshooting, UI/UX exploration with Figma
 
-## ✅ How I work
-- Write the solution myself before comparing approaches or using AI for feedback.
-- Explain each problem in my own words.
-- Test edge cases and improve code readability.
-- Only mark skills or projects completed when I can actually demonstrate them.
+**Exploring:** AI agents, LLM applications, retrieval-augmented generation (RAG), blockchain, software engineering
 
-## 📌 First milestones
-- [ ] Write and run a Hello World program in Java
-- [ ] Review variables, input, conditionals, and loops in Java
-- [ ] Complete five Java practice exercises
-- [ ] Write and run a Hello World program in Python
-- [ ] Complete five Python practice exercises
-- [ ] Implement a simple array-search algorithm and explain its time complexity
+## 🗺️ Development roadmap
+| Focus | Direction |
+| --- | --- |
+| Java & Python refresh | Revisit syntax, OOP, collections, and practical coding |
+| DSA | Strengthen algorithmic thinking and complexity analysis |
+| AI-assisted development | Build reliable workflows with testing and human verification |
+| Software projects | Ship documented applications and improve code quality |
+| AI & blockchain | Explore real-world use cases and prototypes |
+
+## 📂 Repository
+- [Java review](java/README.md)
+- [Python review](python/README.md)
+- [DSA notes](dsa/README.md)
+- [Project ideas and builds](projects/README.md)
+- [Learning log](LEARNING_LOG.md)
+
+## 🎯 What I'm building toward
+I want to combine hands-on software engineering skills with the leverage of modern AI tools: faster iteration, better research, smart automation, and reliable results. AI can accelerate development; understanding, validation, and responsibility still matter.
 
 ---
-*Progress over perfection. Small programs, consistent practice.*
+**Build intelligently. Automate thoughtfully. Keep improving.**
