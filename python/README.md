@@ -1,21 +1,22 @@
-# 🐍 Python — from the fundamentals
+# 🐍 Python | Skills Review & Automation
 
-**Current status:** Relearning from the beginning.
+**Background:** Previously studied Python. Currently refreshing it with a focus on practical scripts, automation, and AI-assisted development.
 
-## Study order
-1. `print()`, variables, basic types
-2. `input()` and type conversion
-3. `if`, `elif`, `else`
-4. `for` and `while` loops
-5. Functions, lists, dictionaries
-6. Files, error handling, and modules
-7. Small practical scripts
+## Review areas
+1. Variables, conditions, loops, functions, and collections
+2. Modules, packages, and virtual environments
+3. Files, exceptions, and debugging
+4. APIs, JSON, and HTTP basics
+5. Automation scripts and testing
+6. Exploring AI applications and tool integrations
 
-## Starter exercises
-- Print a personal greeting.
-- Convert temperatures.
-- Build a simple calculator.
-- Count vowels in a string.
-- Find the maximum in a list.
+## Practice ideas
+- Build a file organizer.
+- Create a CSV analysis script.
+- Make a simple API client.
+- Automate a repetitive personal workflow.
 
-Only move on once you can explain your own solution without copying it.
+## AI-assisted workflow
+Use AI to research libraries, prototype solutions, generate test ideas, and improve documentation. Check dependencies, security, and actual behavior.
+
+*Project ideas are not represented as finished work.*
