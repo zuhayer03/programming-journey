@@ -62,7 +62,7 @@ function paintPalette() {
     const name = document.createElement("span"); name.textContent = item.label;
     const detail = document.createElement("small"); detail.textContent = item.detail;
     row.append(name, detail);
-    row.addEventListener("mouseenter", () => { selection = index; paintPalette(); });
+    row.addEventListener("mouseenter", () => { selection = index; cmdList.querySelectorAll(".palette-item").forEach((el, i) => { el.classList.toggle("selected", i === index); el.setAttribute("aria-selected", String(i === index)); }); });
     row.addEventListener("click", () => navigate(item));
     cmdList.appendChild(row);
   });
@@ -86,7 +86,7 @@ function navigate(item) {
   if (!item) return;
   if (item.href.startsWith("#")) {
     const target = document.querySelector(item.href);
-    if (target) target.scrollIntoView({ behavior: reducedMotion ? "instant" : "smooth" });
+    if (target) target.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth" });
   } else window.open(item.href, "_blank", "noopener,noreferrer");
 }
 cmdLaunch.addEventListener("click", showPalette);
