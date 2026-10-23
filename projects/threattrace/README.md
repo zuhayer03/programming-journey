@@ -1,8 +1,25 @@
-# ThreatTrace — Java Security Log Analyzer
+<div align="center">
 
-Java command-line **prototype** that parses synthetic login-event CSV data, counts failed login attempts by IP, and raises a rule-based alert when a configurable threshold is reached.
+<img src="../../assets/cards/threattrace.svg" width="100%" alt="ThreatTrace — Java Security Log Analyzer original project banner" />
 
-## Run
+**Functional prototype** · Java / JDK · [← All projects](../README.md) · [↗ Developer profile](https://github.com/zuhayer03)
+
+</div>
+
+## What it does
+
+A Java CLI prototype that processes synthetic login-event CSV records, counts failed attempts by IP address, and flags IPs when a configurable threshold is reached.
+
+### Features
+
+- Parse synthetic authentication records
+- Count repeated failed logins by IP
+- Raise rule-based threshold alerts
+- Run test cases without network access
+
+## Run locally
+
+Open a terminal in the `projects/threattrace` directory.
 
 ```bash
 javac ThreatTrace.java ThreatTraceTest.java
@@ -11,4 +28,30 @@ java ThreatTrace sample_logins.csv 3
 java ThreatTraceTest
 ```
 
-Input header must be `timestamp,ip,event` with `FAIL` and `SUCCESS` events. This is an educational rules engine, not a production security tool or attack attribution system. No real accounts or network traffic are accessed.
+**Input:** A CSV with `timestamp,ip,event`, and `FAIL` / `SUCCESS` event values.
+
+**Output:** Console summaries and rule-based alerts
+
+## How it works
+
+```text
+Input / configuration
+       ↓
+Local program logic
+       ↓
+Per-IP attempt counting
+       ↓
+Console alerts
+```
+
+## Limits and safety
+
+Demonstration data is synthetic. This is not a production security tool, live monitor, identity attribution system, or threat detection guarantee.
+
+## Next improvement
+
+Improve input validation, modularity, and tests before exploring richer detection rules.
+
+---
+
+<sub>Built for learning and for honest, inspectable software engineering portfolio work. See the source and test files in this directory.</sub>
