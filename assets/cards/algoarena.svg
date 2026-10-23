@@ -1,12 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-label="ALGOARENA banner">
-<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c1226"/><stop offset=".6" stop-color="#1a1e43"/><stop offset="1" stop-color="#0a1528"/></linearGradient><radialGradient id="halo"><stop stop-color="#d1a3ff" stop-opacity=".28"/><stop offset="1" stop-color="#d1a3ff" stop-opacity="0"/></radialGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#9fdfff" stroke-opacity=".10"/></pattern></defs>
-<rect width="1200" height="330" rx="18" fill="url(#bg)"/><rect width="1200" height="330" rx="18" fill="url(#grid)"/><circle cx="980" cy="173" r="300" fill="url(#halo)"/>
-<g font-family="Consolas,monospace"><text x="45" y="56" font-size="16" letter-spacing="3" fill="#74dcf8">Z // SIGNAL    /    PROJECT 03</text><path d="M45 76H728" stroke="#4e6b94" stroke-opacity=".7"/>
-<text x="44" y="147" font-weight="bold" font-size="51" letter-spacing="-2" fill="#f4f7ff">ALGOARENA</text>
-<text x="46" y="196" font-size="19" fill="#b0bfd7">Sorting races / repeatable comparisons / Java</text>
-<rect x="43" y="224" width="250" height="35" rx="16" fill="#14253d" stroke="#d1a3ff" stroke-opacity=".6"/>
-<text x="168" y="247" font-size="14" fill="#d1a3ff" text-anchor="middle">JAVA · ALGORITHMS</text>
-<text x="46" y="302" font-size="13" fill="#7f97b4">zuhayer03 / programming-journey</text></g>
-<g transform="translate(814 72)" stroke="#d1a3ff" stroke-width="2"><rect x="5" y="138" width="32" height="80" rx="3" fill="#8368e9"/><rect x="55" y="67" width="32" height="151" rx="3" fill="#ad8afb"/><rect x="105" y="116" width="32" height="102" rx="3" fill="#8368e9"/><rect x="155" y="34" width="32" height="184" rx="3" fill="#ad8afb"/><rect x="205" y="90" width="32" height="128" rx="3" fill="#8368e9"/></g>
-<rect x="1" y="1" width="1198" height="328" rx="17" fill="none" stroke="#d1a3ff" stroke-opacity=".24"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="365" viewBox="0 0 1200 365" role="img" aria-label="ALGO ARENA project illustration">
+<defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#2D1A10" stroke-opacity=".07"/></pattern></defs>
+<rect width="1200" height="365" rx="18" fill="#F0BC9F"/><rect width="1200" height="365" rx="18" fill="url(#grid)"/>
+<rect x="34" y="28" width="235" height="31" rx="16" fill="#2D1A10"/><text x="52" y="49" font-size="13" font-weight="bold" font-family="monospace" fill="#F0BC9F">Z✳F / BUILD INDEX 03</text>
+<text x="36" y="163" font-size="97" font-weight="900" font-family="Arial,Helvetica,sans-serif" letter-spacing="-7" fill="#2D1A10">ALGO</text>
+<text x="36" y="255" font-size="97" font-weight="900" font-family="Arial,Helvetica,sans-serif" letter-spacing="-7" fill="#2D1A10">ARENA</text>
+<path d="M36 281H730" stroke="#2D1A10" stroke-opacity=".5"/><text x="37" y="316" font-family="monospace" font-size="17" fill="#2D1A10">SORT  /  COMPARE  /  IN DEVELOPMENT</text>
+<text x="37" y="343" font-family="monospace" font-size="13" fill="#8D4935">JAVA / ALGORITHMS</text>
+<g transform="translate(795 46)" fill="#32251C"><rect x="0" y="160" width="32" height="122" rx="5"/><rect x="42" y="92" width="32" height="190" rx="5"/><rect x="84" y="190" width="32" height="92" rx="5"/><rect x="126" y="58" width="32" height="224" rx="5"/><rect x="168" y="135" width="32" height="147" rx="5"/><rect x="210" y="108" width="32" height="174" rx="5"/><rect x="252" y="178" width="32" height="104" rx="5"/><rect x="294" y="78" width="32" height="204" rx="5"/></g>
+<rect x="1" y="1" width="1198" height="363" rx="17" fill="none" stroke="#2D1A10" stroke-opacity=".3"/>
 </svg>
