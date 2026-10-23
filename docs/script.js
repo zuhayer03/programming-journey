@@ -37,6 +37,8 @@ const commands=[
  {label:"Selected Work",detail:"02 / Four projects",href:"#work"},
  {label:"Creative Lab",detail:"03 / Interactive experiments",href:"lab.html"},
  {label:"About",detail:"04 / Backstory",href:"#about"},
+ {label:"Tool Universe",detail:"04 / 29 tools + 3D orbit",href:"#tools"},
+ {label:"Current Focus",detail:"05 / Learning and co-op",href:"#focus"},
  {label:"Timeline",detail:"05 / Experience",href:"#now"},
  {label:"Connect",detail:"06 / Co-op opportunities",href:"#contact"},
  {label:"GitHub",detail:"External / Source code",href:"https://github.com/zuhayer03"},
@@ -96,4 +98,65 @@ if(art&&!reduceMotion&&window.matchMedia("(hover:hover)").matches){
   raf=requestAnimationFrame(()=>{art.style.transform="translate("+(-x*15)+"px,"+(-y*15)+"px)";});
  });
  surface.addEventListener("pointerleave",()=>{if(raf)cancelAnimationFrame(raf);art.style.transform="";});
+}
+
+
+// Interactive 3D hover for actual project cards — navigation still works normally.
+if(!reduceMotion && window.matchMedia("(hover:hover) and (pointer:fine)").matches){
+ document.querySelectorAll(".project-card").forEach(card=>{
+   let frame=0;
+   card.addEventListener("pointermove",e=>{
+     const r=card.getBoundingClientRect();
+     const px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;
+     if(frame)cancelAnimationFrame(frame);
+     frame=requestAnimationFrame(()=>{
+       card.style.setProperty("--tilt-y",((px-.5)*11).toFixed(2)+"deg");
+       card.style.setProperty("--tilt-x",((.5-py)*11).toFixed(2)+"deg");
+       card.style.setProperty("--shine-x",(px*100).toFixed(0)+"%");
+       card.style.setProperty("--shine-y",(py*100).toFixed(0)+"%");
+     });
+   },{passive:true});
+   card.addEventListener("pointerleave",()=>{
+     if(frame)cancelAnimationFrame(frame);
+     card.style.setProperty("--tilt-x","0deg");card.style.setProperty("--tilt-y","0deg");
+   },{passive:true});
+ });
+}
+
+// Experience accordion — grounded, short summaries that complement the resume.
+const timelineDescriptions=[
+ "Current undergraduate study in computer science, with a focus on Java, data structures, algorithms and practical engineering.",
+ "Campus media, reporting, photography, event coverage, and supporting digital and organizational operations.",
+ "IT systems support, troubleshooting and network-support workflows.",
+ "Network infrastructure and operations experience supporting cable-network services.",
+ "Early hands-on exposure to IT support and network operations."
+];
+document.querySelectorAll(".timeline-row").forEach((row,index)=>{
+ const content=row.querySelector("div");
+ const title=content?.querySelector("h3");
+ if(!content||!title)return;
+ const button=document.createElement("button");
+ button.className="timeline-toggle";button.type="button";
+ button.setAttribute("aria-expanded","false");
+ button.setAttribute("aria-label","More about "+title.textContent);
+ const plus=document.createElement("span");plus.className="plus";plus.textContent="+";
+ button.append(title,plus);content.insertBefore(button,content.firstChild);
+ const detail=document.createElement("div");
+ detail.className="timeline-detail";detail.hidden=true;
+ detail.textContent=timelineDescriptions[index]||"Part of my journey into computer science.";
+ row.appendChild(detail);
+ button.addEventListener("click",()=>{
+   const open=button.getAttribute("aria-expanded")==="true";
+   button.setAttribute("aria-expanded",String(!open));plus.textContent=open?"+":"−";
+   detail.hidden=open;
+ });
+});
+
+// Scroll reveal: progressive enhancement; reduced-motion users see everything immediately.
+if(!reduceMotion && "IntersectionObserver" in window){
+ const targets=document.querySelectorAll(".section-head,.project-card,.tool-workspace,.story-main,.mini-card,.focus-copy,.timeline-row");
+ const observer=new IntersectionObserver(entries=>{
+   entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("is-visible");observer.unobserve(entry.target);}});
+ },{rootMargin:"0px 0px 35px 0px",threshold:0.04});
+ targets.forEach(el=>{el.classList.add("reveal");observer.observe(el);});
 }
