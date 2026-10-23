@@ -1,68 +1,73 @@
 <div align="center">
 
-<a href="https://github.com/zuhayer03"><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/identity.svg" width="100%" alt="Z SIGNAL - Zuhayer Alam Faiyaz" /></a>
+<a href="https://github.com/zuhayer03"><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/identity.svg" width="100%" alt="Zuhayer Alam Faiyaz creative engineering identity" /></a>
 
-### Real projects. Small experiments. Continuous improvement.
+### PROJECT ARCHIVE / CREATIVE ENGINEERING
 
-[![Portfolio Project Tests](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml/badge.svg)](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml) [![ToolPilot Tests](https://github.com/zuhayer03/programming-journey/actions/workflows/agent-tests.yml/badge.svg)](https://github.com/zuhayer03/programming-journey/actions/workflows/agent-tests.yml)
+**Good design. Real source. Honest scope.**
 
-<a href="https://zuhayer03.github.io/programming-journey/"><img src="https://img.shields.io/badge/OPEN-PORTFOLIO_WEBSITE-11263b?style=for-the-badge&logo=firefoxbrowser&logoColor=70e7ef" alt="Portfolio website" /></a>
-<a href="projects/"><img src="https://img.shields.io/badge/EXPLORE-4_PROJECTS-11263b?style=for-the-badge&logo=github&logoColor=c4a4ff" alt="Explore all four project folders" /></a>
-<a href="https://github.com/zuhayer03"><img src="https://img.shields.io/badge/PROFILE-Z_SIGNAL-11263b?style=for-the-badge&logo=github&logoColor=70e7ef" alt="GitHub profile" /></a>
+<a href="https://zuhayer03.github.io/programming-journey/"><img src="https://img.shields.io/badge/PORTFOLIO-WEBSITE-191D16?style=for-the-badge&logo=firefoxbrowser&logoColor=D9FF65" alt="Live website"/></a>
+<a href="https://zuhayer03.github.io/programming-journey/lab.html"><img src="https://img.shields.io/badge/INTERACTIVE-THE_LAB-191D16?style=for-the-badge&logo=github&logoColor=D9FF65" alt="Creative engineering lab"/></a>
+<a href="projects/"><img src="https://img.shields.io/badge/PROJECTS-ALL_FOUR-191D16?style=for-the-badge&logo=github&logoColor=D9FF65" alt="Four verified project folders"/></a>
+
+<br/><br/>
+
+[![Project Tests](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml/badge.svg)](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml)
+[![Site Quality](https://github.com/zuhayer03/programming-journey/actions/workflows/site-quality.yml/badge.svg)](https://github.com/zuhayer03/programming-journey/actions/workflows/site-quality.yml)
+[![Pages](https://github.com/zuhayer03/programming-journey/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/zuhayer03/programming-journey/actions/workflows/deploy-pages.yml)
 
 </div>
 
-## What you'll find here
+## WHAT IS THIS?
 
-This is my developer learning and project workspace. I'm a **Computer Science student at Kettering University** with earlier experience in IT support and network infrastructure. I’m strengthening my Java and Python skills while building focused, testable projects.
+I'm **Zuhayer Alam Faiyaz**, a Kettering University CS student with prior experience in IT support and network infrastructure. This is my public workspace for learning, building, and improving software.
 
-The work is organized so a recruiter or fellow student can inspect the actual code—not just screenshots or claims.
+I've kept the project descriptions grounded: these are educational student applications with source code and tests, not production services.
 
-<div align="center"><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/project-panels.svg" alt="Four CV portfolio projects" width="100%" /></div>
+<div align="center"><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/project-panels.svg" width="100%" alt="Four custom illustrated project previews" /></div>
 
-| Build | Language | Source | Status |
+| Build | Technology | Source code | State |
 |:--|:--|:--|:--|
-| **Network Monitor** | Python | [Source + tests](projects/network-monitor/) | Working student project |
-| **Finance Tracker** | Python | [Source + tests](projects/finance-tracker/) | Working student project |
-| **AlgoArena** | Java | [Source + tests](projects/algoarena/) | In development |
-| **ThreatTrace** | Java | [Source + tests](projects/threattrace/) | Functional prototype |
+| **Network Monitor** | Python · TCP connectivity | [Explore →](projects/network-monitor/) | Working project |
+| **Finance Tracker** | Python · CLI budgeting & SVG chart | [Explore →](projects/finance-tracker/) | Working project |
+| **AlgoArena** | Java · Sorting & timing | [Explore →](projects/algoarena/) | In progress |
+| **ThreatTrace** | Java · Synthetic login logs | [Explore →](projects/threattrace/) | Functional prototype |
 
-### Other things I'm learning
+### SOMETHING EXTRA: THE CREATIVE ENGINEERING LAB ✳
 
-| Area | Explore |
+I built a separate interactive website where you can actually **play with** the concepts behind these projects.
+
+- **Sorting Explorer:** Choose Bubble, Selection, or Insertion Sort and watch array operations.
+- **Auth Event Analyzer:** Flag suspicious patterns in synthetic login events.
+- **Budget Sandbox:** Change fictional expense values and visualize the remaining budget.
+
+**[Launch the interactive lab →](https://zuhayer03.github.io/programming-journey/lab.html)**
+
+These are independent JavaScript browser demos; my main Java/Python implementations remain in the project folders above.
+
+## FIND YOUR WAY AROUND
+
+| Folder | What it contains |
 |:--|:--|
-| **ToolPilot** — a deterministic, rule-based Python tool router, not an LLM agent | [Python code + tests](agent/) |
-| **Java practice & DSA** | [Java learning notes](java/) · [DSA folder](dsa/) |
-| **Python fundamentals** | [Python folder](python/) |
-| **Portfolio website** — a responsive, accessible static site with original visual design | [HTML/CSS/JS source](docs/) |
-| **Learning log** | [Development notes](LEARNING_LOG.md) |
+| [`projects/`](projects/) | Four source-code projects with run instructions and tests |
+| [`agent/`](agent/) | ToolPilot — deterministic rule-based Python tool router |
+| [`java/`](java/) and [`dsa/`](dsa/) | Java and algorithms study material |
+| [`python/`](python/) | Python practice |
+| [`docs/`](docs/) | Creative engineering website and interactive lab (HTML / CSS / JS) |
+| [`LEARNING_LOG.md`](LEARNING_LOG.md) | Ongoing learning notes |
 
-## Run the projects
+## HOW TO EXPLORE THE CODE
 
-Each project folder includes a **README with prerequisites, run commands, scope, and limitations**. The Python projects use the standard library. The Java projects are CLI examples that can run using a JDK.
+Each project directory includes its own README, source files, sample inputs, and test instructions. The Java projects use a JDK; the Python projects use the standard library. No real bank or security-system connections are made.
 
-These are intentionally **educational student applications**, not production security software, research-grade algorithm benchmarks, or connected financial services.
-
-## Portfolio features
-
-The [portfolio website](https://zuhayer03.github.io/programming-journey/) includes a hand-built orbital hero, accessible keyboard navigation (`Ctrl/Cmd + K`), project filtering, and reduced-motion support. The static source lives in [`docs/`](docs/). A GitHub Actions workflow handles Pages deployment.
-
-## The current direction
-
-```text
-JAVA / PYTHON
-   ├── Stronger programming fundamentals
-   ├── Data structures & algorithms
-   ├── Testable projects with clear documentation
-   └── Future work: AI automation + intelligent tooling
-```
+The website is deployed through GitHub Pages. Automated checks validate JavaScript syntax, HTML structure, and local asset links; the project test workflow checks the separate Java and Python student programs.
 
 ---
 
 <div align="center">
 
-**[GitHub profile](https://github.com/zuhayer03)** · **[LinkedIn](https://www.linkedin.com/in/zuhayer-alam-faiyaz-8bb1a3442/)** · **[All projects](projects/)**
+**Ideas, made real. One small project at a time.**
 
-<sub>Z // SIGNAL · Built with intention. The README is a guide to inspectable code, not a substitute for it.</sub>
+[GitHub profile](https://github.com/zuhayer03) · [Portfolio](https://zuhayer03.github.io/programming-journey/) · [Interactive lab](https://zuhayer03.github.io/programming-journey/lab.html) · [LinkedIn](https://www.linkedin.com/in/zuhayer-alam-faiyaz-8bb1a3442/)
 
 </div>
