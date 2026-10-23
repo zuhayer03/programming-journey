@@ -1,12 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-label="THREATTRACE banner">
-<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c1226"/><stop offset=".6" stop-color="#1a1e43"/><stop offset="1" stop-color="#0a1528"/></linearGradient><radialGradient id="halo"><stop stop-color="#75ece2" stop-opacity=".28"/><stop offset="1" stop-color="#75ece2" stop-opacity="0"/></radialGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#9fdfff" stroke-opacity=".10"/></pattern></defs>
-<rect width="1200" height="330" rx="18" fill="url(#bg)"/><rect width="1200" height="330" rx="18" fill="url(#grid)"/><circle cx="980" cy="173" r="300" fill="url(#halo)"/>
-<g font-family="Consolas,monospace"><text x="45" y="56" font-size="16" letter-spacing="3" fill="#bea4fa">Z // SIGNAL    /    PROJECT 04</text><path d="M45 76H728" stroke="#4e6b94" stroke-opacity=".7"/>
-<text x="44" y="147" font-weight="bold" font-size="51" letter-spacing="-2" fill="#f4f7ff">THREATTRACE</text>
-<text x="46" y="196" font-size="19" fill="#b0bfd7">Synthetic event logs / failed-login detection / Java</text>
-<rect x="43" y="224" width="250" height="35" rx="16" fill="#14253d" stroke="#75ece2" stroke-opacity=".6"/>
-<text x="168" y="247" font-size="14" fill="#75ece2" text-anchor="middle">JAVA · SECURITY</text>
-<text x="46" y="302" font-size="13" fill="#7f97b4">zuhayer03 / programming-journey</text></g>
-<path d="M956 61L1064 103V179C1064 235 1016 264 956 288C896 264 848 235 848 179V103Z" fill="#17364d" stroke="#75ece2" stroke-width="4"/><path d="M956 90L1032 121V179C1032 217 995 242 956 256C918 242 880 217 880 179V121Z" fill="#11253c" stroke="#75ece2" opacity=".4"/><text x="956" y="208" text-anchor="middle" font-size="100" font-family="monospace" fill="#75ece2">!</text>
-<rect x="1" y="1" width="1198" height="328" rx="17" fill="none" stroke="#75ece2" stroke-opacity=".24"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="365" viewBox="0 0 1200 365" role="img" aria-label="THREAT TRACE project illustration">
+<defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#1E3227" stroke-opacity=".07"/></pattern></defs>
+<rect width="1200" height="365" rx="18" fill="#D4DFD6"/><rect width="1200" height="365" rx="18" fill="url(#grid)"/>
+<rect x="34" y="28" width="235" height="31" rx="16" fill="#1E3227"/><text x="52" y="49" font-size="13" font-weight="bold" font-family="monospace" fill="#D4DFD6">Z✳F / BUILD INDEX 04</text>
+<text x="36" y="163" font-size="97" font-weight="900" font-family="Arial,Helvetica,sans-serif" letter-spacing="-7" fill="#1E3227">THREAT</text>
+<text x="36" y="255" font-size="97" font-weight="900" font-family="Arial,Helvetica,sans-serif" letter-spacing="-7" fill="#1E3227">TRACE</text>
+<path d="M36 281H730" stroke="#1E3227" stroke-opacity=".5"/><text x="37" y="316" font-family="monospace" font-size="17" fill="#1E3227">SYNTHETIC LOGS  /  PROTOTYPE</text>
+<text x="37" y="343" font-family="monospace" font-size="13" fill="#446959">JAVA / SECURITY</text>
+<path d="M969 34L1101 87V178C1101 253 1048 299 969 335C890 299 837 253 837 178V87Z" fill="#1b3830"/><text x="969" y="267" font-size="187" text-anchor="middle" fill="#D9FF65" font-family="Arial" font-weight="900">!</text>
+<rect x="1" y="1" width="1198" height="363" rx="17" fill="none" stroke="#1E3227" stroke-opacity=".3"/>
 </svg>
