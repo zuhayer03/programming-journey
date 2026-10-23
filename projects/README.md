@@ -4,6 +4,8 @@
 
 **Four projects. Two languages. Practical learning.**
 
+[![Project Test Status](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml/badge.svg)](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml)
+
 [← Portfolio home](../README.md) · [↗ Public website](https://zuhayer03.github.io/programming-journey/) · [↗ GitHub profile](https://github.com/zuhayer03)
 
 </div>
