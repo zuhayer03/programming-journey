@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-label="NETWORK MONITOR banner">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c1226"/><stop offset=".6" stop-color="#1a1e43"/><stop offset="1" stop-color="#0a1528"/></linearGradient><radialGradient id="halo"><stop stop-color="#6ef0e4" stop-opacity=".28"/><stop offset="1" stop-color="#6ef0e4" stop-opacity="0"/></radialGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#9fdfff" stroke-opacity=".10"/></pattern></defs>
+<rect width="1200" height="330" rx="18" fill="url(#bg)"/><rect width="1200" height="330" rx="18" fill="url(#grid)"/><circle cx="980" cy="173" r="300" fill="url(#halo)"/>
+<g font-family="Consolas,monospace"><text x="45" y="56" font-size="16" letter-spacing="3" fill="#5fcaff">Z // SIGNAL    /    PROJECT 01</text><path d="M45 76H728" stroke="#4e6b94" stroke-opacity=".7"/>
+<text x="44" y="147" font-weight="bold" font-size="51" letter-spacing="-2" fill="#f4f7ff">NETWORK MONITOR</text>
+<text x="46" y="196" font-size="19" fill="#b0bfd7">TCP connectivity / connection timing / CSV + JSON</text>
+<rect x="43" y="224" width="250" height="35" rx="16" fill="#14253d" stroke="#6ef0e4" stroke-opacity=".6"/>
+<text x="168" y="247" font-size="14" fill="#6ef0e4" text-anchor="middle">PYTHON · SYSTEMS</text>
+<text x="46" y="302" font-size="13" fill="#7f97b4">zuhayer03 / programming-journey</text></g>
+<g stroke="#6ef0e4" stroke-width="3" fill="#111c31"><path d="M930 80L1040 125L953 235L847 161Z" stroke-opacity=".44"/><circle cx="930" cy="80" r="17"/><circle cx="1040" cy="125" r="17"/><circle cx="953" cy="235" r="17"/><circle cx="847" cy="161" r="17"/><circle cx="953" cy="158" r="42"/><path d="M930 80L953 158L1040 125M953 158L953 235L847 161" fill="none" stroke-opacity=".63"/></g><text x="953" y="167" text-anchor="middle" font-size="20" font-family="monospace" fill="#72f8e6">UP</text>
+<rect x="1" y="1" width="1198" height="328" rx="17" fill="none" stroke="#6ef0e4" stroke-opacity=".24"/>
+</svg>
