@@ -1,17 +1,14 @@
-# 🛠️ Projects
+# CV Portfolio Projects
 
-This folder will contain projects **once they are implemented and tested**.
+Four small, working student projects built as a foundation for computer science co-op applications. Each project has its own source, test files, sample inputs, and setup instructions.
 
-## Starter project ideas
-| Project | Skills to practice | Status |
+| Project | Language | What it does |
 | --- | --- | --- |
-| Command-line calculator | Input, conditions, methods | Idea |
-| Student grade tracker | Lists/arrays, loops, functions | Idea |
-| Personal expense tracker | File handling, validation | Idea |
-| Algorithm visualizer | Data structures, UI fundamentals | Idea |
-| AI-powered notes prototype | APIs, retrieval, testing | Future idea |
+| [Network Monitor](network-monitor/) | Python | TCP connectivity checks and CSV/JSON reports |
+| [Finance Tracker](finance-tracker/) | Python | Expense summaries, budget calculations and SVG spending chart |
+| [AlgoArena](algoarena/) | Java | Sorting comparison and repeatable sample-input correctness checks |
+| [ThreatTrace](threattrace/) | Java | Counts failed logins by IP and raises sample-data threshold alerts |
 
-## Definition of done
-A completed project should include setup instructions, working code, an example run, tests or test cases, and a short discussion of what I learned.
+**Scope:** These are educational console programs, not deployed services. AlgoArena is a work in progress and ThreatTrace is a functional prototype. All sample information is synthetic.
 
-No project is claimed as complete until it works.
+Run the project-specific commands in each README to test and explore the code.
