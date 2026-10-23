@@ -138,3 +138,54 @@ $("budget-reset").addEventListener("click",()=>{
  updateBudget();
 });
 updateBudget();
+
+// Network Monitor: local, synthetic connectivity state machine. No socket or fetch API used.
+let netRunToken=0;
+const scenarios={
+  healthy:[{name:"API",up:true,ms:24},{name:"DB",up:true,ms:42},{name:"EDGE",up:true,ms:31},{name:"WEB",up:true,ms:28}],
+  degraded:[{name:"API",up:true,ms:157},{name:"DB",up:true,ms:480},{name:"EDGE",up:true,ms:230},{name:"WEB",up:true,ms:315}],
+  partial:[{name:"API",up:true,ms:58},{name:"DB",up:false,ms:null},{name:"EDGE",up:false,ms:null},{name:"WEB",up:true,ms:73}]
+};
+const netDevices=[...document.querySelectorAll(".sim-device")];
+function resetNetwork(){
+  netRunToken++;
+  netDevices.forEach(el=>{el.classList.remove("up","down","checking");el.querySelector("strong").textContent="?";});
+  $("net-status").textContent="STANDING BY";
+  $("net-up").textContent="—";$("net-down").textContent="—";$("net-latency").textContent="—";
+  $("net-readout").textContent="Choose a scenario and run a local simulation.";
+  $("net-run").disabled=false;
+}
+async function runNetwork(){
+  const token=++netRunToken;
+  const data=scenarios[$("net-scenario").value]||scenarios.healthy;
+  resetNetwork();
+  // reset increments the cancellation token: capture it again to keep this run authoritative.
+  const current=++netRunToken;
+  $("net-run").disabled=true;
+  $("net-status").textContent="SIMULATING...";
+  const results=[];
+  for(let i=0;i<data.length;i++){
+    if(current!==netRunToken)return;
+    const el=netDevices[i],item=data[i];
+    el.classList.add("checking");el.querySelector("strong").textContent="…";
+    if(!reduced)await sleep(380);
+    if(current!==netRunToken)return;
+    el.classList.remove("checking");el.classList.add(item.up?"up":"down");
+    el.querySelector("strong").textContent=item.up?"UP":"DOWN";
+    results.push(item);
+  }
+  const up=results.filter(x=>x.up);
+  const down=results.length-up.length;
+  const avg=up.length?Math.round(up.reduce((s,x)=>s+x.ms,0)/up.length):null;
+  $("net-up").textContent=String(up.length);
+  $("net-down").textContent=String(down);
+  $("net-latency").textContent=avg===null?"N/A":avg+" ms";
+  $("net-status").textContent=down?"DEGRADED / SIMULATED":"ALL SYSTEMS UP / SIMULATED";
+  const lines=results.map(x=>x.name+" : "+(x.up?"UP ("+x.ms+" ms)":"DOWN (simulated blocked / unreachable)"));
+  $("net-readout").textContent=lines.join("\n");
+  $("net-run").disabled=false;
+}
+$("net-run").addEventListener("click",runNetwork);
+$("net-reset").addEventListener("click",resetNetwork);
+$("net-scenario").addEventListener("change",resetNetwork);
+resetNetwork();
