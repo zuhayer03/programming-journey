@@ -1,0 +1,71 @@
+name: Portfolio Website Quality
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - ".github/workflows/site-quality.yml"
+  pull_request:
+    paths:
+      - "docs/**"
+      - ".github/workflows/site-quality.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Check HTML, JS and local links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check JavaScript syntax
+        run: |
+          node --check docs/script.js
+          node --check docs/lab.js
+      - name: Check document structure and local assets
+        run: |
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urlsplit, unquote
+
+          root = Path("docs")
+          pages = [root / "index.html", root / "lab.html"]
+          class Reader(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.ids = set()
+                  self.refs = []
+                  self.title_seen = False
+              def handle_starttag(self, tag, attrs):
+                  a = dict(attrs)
+                  if "id" in a:
+                      if a["id"] in self.ids:
+                          raise AssertionError(f"Duplicate ID: {a['id']}")
+                      self.ids.add(a["id"])
+                  if tag == "title": self.title_seen = True
+                  if tag in ("a", "script", "link", "img"):
+                      src = a.get("href") or a.get("src")
+                      if src: self.refs.append(src)
+          for page in pages:
+              assert page.exists(), f"Missing page {page}"
+              p = Reader()
+              p.feed(page.read_text(encoding="utf-8"))
+              assert p.title_seen, f"Missing title: {page}"
+              for ref in p.refs:
+                  parsed = urlsplit(ref)
+                  if parsed.scheme or parsed.netloc or ref.startswith("//") or ref.startswith("mailto:"):
+                      continue
+                  if parsed.path:
+                      local = (page.parent / unquote(parsed.path)).resolve()
+                      assert local.is_file(), f"{page}: broken local link {ref}"
+                  if not parsed.path and parsed.fragment:
+                      assert parsed.fragment in p.ids, f"{page}: missing anchor {ref}"
+              print(f"PASS: {page} ({len(p.ids)} IDs, {len(p.refs)} links/assets)")
+          PY
