@@ -4,6 +4,8 @@
 
 ### Real projects. Small experiments. Continuous improvement.
 
+[![Portfolio Project Tests](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml/badge.svg)](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml) [![ToolPilot Tests](https://github.com/zuhayer03/programming-journey/actions/workflows/agent-tests.yml/badge.svg)](https://github.com/zuhayer03/programming-journey/actions/workflows/agent-tests.yml)
+
 <a href="https://zuhayer03.github.io/programming-journey/"><img src="https://img.shields.io/badge/OPEN-PORTFOLIO_WEBSITE-11263b?style=for-the-badge&logo=firefoxbrowser&logoColor=70e7ef" alt="Portfolio website" /></a>
 <a href="projects/"><img src="https://img.shields.io/badge/EXPLORE-4_PROJECTS-11263b?style=for-the-badge&logo=github&logoColor=c4a4ff" alt="Explore all four project folders" /></a>
 <a href="https://github.com/zuhayer03"><img src="https://img.shields.io/badge/PROFILE-Z_SIGNAL-11263b?style=for-the-badge&logo=github&logoColor=70e7ef" alt="GitHub profile" /></a>
