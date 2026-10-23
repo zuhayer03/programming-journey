@@ -1,14 +1,41 @@
-# CV Portfolio Projects
+<div align="center">
 
-Four small, working student projects built as a foundation for computer science co-op applications. Each project has its own source, test files, sample inputs, and setup instructions.
+# Z // SIGNAL · PROJECT ARCHIVE
 
-| Project | Language | What it does |
-| --- | --- | --- |
-| [Network Monitor](network-monitor/) | Python | TCP connectivity checks and CSV/JSON reports |
-| [Finance Tracker](finance-tracker/) | Python | Expense summaries, budget calculations and SVG spending chart |
-| [AlgoArena](algoarena/) | Java | Sorting comparison and repeatable sample-input correctness checks |
-| [ThreatTrace](threattrace/) | Java | Counts failed logins by IP and raises sample-data threshold alerts |
+**Four projects. Two languages. Practical learning.**
 
-**Scope:** These are educational console programs, not deployed services. AlgoArena is a work in progress and ThreatTrace is a functional prototype. All sample information is synthetic.
+[← Portfolio home](../README.md) · [↗ Public website](https://zuhayer03.github.io/programming-journey/) · [↗ GitHub profile](https://github.com/zuhayer03)
 
-Run the project-specific commands in each README to test and explore the code.
+</div>
+
+### 01 · Network Monitor
+
+<a href="network-monitor/"><img width="100%" src="../assets/cards/network-monitor.svg" alt="Network Monitor project banner"/></a>
+
+**[Open source and tests →](network-monitor/)** · Python · TCP connection checking and CSV/JSON reports · Working student project
+
+### 02 · Finance Tracker
+
+<a href="finance-tracker/"><img width="100%" src="../assets/cards/finance-tracker.svg" alt="Finance Tracker project banner"/></a>
+
+**[Open source and tests →](finance-tracker/)** · Python · Category expenses, budgets, and SVG spending chart · Working student project
+
+### 03 · AlgoArena
+
+<a href="algoarena/"><img width="100%" src="../assets/cards/algoarena.svg" alt="AlgoArena project banner"/></a>
+
+**[Open source and tests →](algoarena/)** · Java · Three sorting methods and educational timing comparisons · In development
+
+### 04 · ThreatTrace
+
+<a href="threattrace/"><img width="100%" src="../assets/cards/threattrace.svg" alt="ThreatTrace project banner"/></a>
+
+**[Open source and tests →](threattrace/)** · Java · Synthetic login-event log parsing and failed-login thresholds · Functional prototype
+
+---
+
+### Notes for reviewers
+
+All four folders include code, setup instructions and test files. **These are educational console programs, not deployed products.** AlgoArena's richer visual simulator is future work; ThreatTrace runs against synthetic data rather than a live security feed. Python monitor probes only configured TCP services, not general ICMP hosts. This distinction is important.
+
+[← Back to programming-journey](../README.md)
