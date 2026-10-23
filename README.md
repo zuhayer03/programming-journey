@@ -40,10 +40,17 @@ I built a separate interactive website where you can actually **play with** the 
 - **Sorting Explorer:** Choose Bubble, Selection, or Insertion Sort and watch array operations.
 - **Auth Event Analyzer:** Flag suspicious patterns in synthetic login events.
 - **Budget Sandbox:** Change fictional expense values and visualize the remaining budget.
+- **Network Simulator:** Explore fictional TCP checks, simulated delays and partial outages.
 
 **[Launch the interactive lab →](https://zuhayer03.github.io/programming-journey/lab.html)**
 
 These are independent JavaScript browser demos; my main Java/Python implementations remain in the project folders above.
+
+### THE TOOL UNIVERSE / INTERACTIVE 3D
+
+**[Explore my 29-tool universe →](https://zuhayer03.github.io/programming-journey/#tools)** — a searchable, category-filtered workspace featuring my programming environment, AI coding assistants, agent frameworks, AI infrastructure, review tools, research workflow, and practice platforms. The live website also features an original **WebGL 3D torus-knot identity** with pointer-responsive rotation and motion fallbacks.
+
+Tools in the directory include both familiar workflows and technologies I am learning or exploring, rather than a claim of equal proficiency.
 
 ## FIND YOUR WAY AROUND
 
