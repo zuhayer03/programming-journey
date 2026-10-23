@@ -1,161 +1,99 @@
 "use strict";
+// Z✳F — intentionally framework-free interactions. Site content works without JS.
+const $ = id => document.getElementById(id);
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if ($("year")) $("year").textContent = String(new Date().getFullYear());
 
-// Small enhancements only: the content and links work without JavaScript.
-const year = document.getElementById("year");
-if (year) year.textContent = String(new Date().getFullYear());
-
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-// Project filters keep all four real projects present in the HTML and accessible without scripts.
-const filters = [...document.querySelectorAll(".filter")];
-const cards = [...document.querySelectorAll(".project-card")];
-filters.forEach((button) => {
-  button.addEventListener("click", () => {
-    const choice = button.dataset.filter;
-    filters.forEach((f) => {
-      const active = f === button;
-      f.classList.toggle("active", active);
-      f.setAttribute("aria-pressed", String(active));
-    });
-    cards.forEach((card) => {
-      card.hidden = choice !== "all" && card.dataset.lang !== choice;
-    });
-  });
+// Theme switch: an editorial light mode by default, dark mode on request.
+const themeToggle = $("theme-toggle");
+function setTheme(isDark){
+ document.body.classList.toggle("dark",isDark);
+ themeToggle.setAttribute("aria-pressed",String(isDark));
+ themeToggle.setAttribute("aria-label",isDark?"Switch to light theme":"Switch to dark theme");
+ themeToggle.title=isDark?"Switch to light theme":"Switch to dark theme";
+}
+let savedTheme=null;
+try {savedTheme=localStorage.getItem("zf-theme");}catch(_){}
+setTheme(savedTheme==="dark");
+themeToggle.addEventListener("click",()=>{
+ const next=!document.body.classList.contains("dark");setTheme(next);
+ try{localStorage.setItem("zf-theme",next?"dark":"light");}catch(_){}
 });
 
-// Command palette: Ctrl/Cmd+K or /, arrow keys, Enter, and Escape.
-const palette = document.getElementById("command-palette");
-const cmdInput = document.getElementById("command-input");
-const cmdList = document.getElementById("command-list");
-const cmdLaunch = document.getElementById("command-launch");
-const cmdClose = document.getElementById("command-close");
-const commands = [
-  { label: "Home", detail: "01 / Introduction", href: "#home" },
-  { label: "About", detail: "02 / My story", href: "#about" },
-  { label: "Projects", detail: "03 / Source and demos", href: "#projects" },
-  { label: "Toolkit", detail: "04 / Technologies", href: "#skills" },
-  { label: "Experience", detail: "05 / Timeline", href: "#experience" },
-  { label: "Contact", detail: "06 / Co-op opportunities", href: "#contact" },
-  { label: "GitHub", detail: "External / Profile", href: "https://github.com/zuhayer03" },
-  { label: "LinkedIn", detail: "External / Professional profile", href: "https://www.linkedin.com/in/zuhayer-alam-faiyaz-8bb1a3442/" }
+// Functional project filters — ALL / PYTHON / JAVA.
+const buttons=[...document.querySelectorAll(".filter")];
+const projects=[...document.querySelectorAll(".project-card")];
+buttons.forEach(button=>button.addEventListener("click",()=>{
+ const filter=button.dataset.filter;
+ buttons.forEach(b=>{const current=b===button;b.classList.toggle("active",current);b.setAttribute("aria-pressed",String(current));});
+ projects.forEach(card=>{card.hidden=filter!=="all"&&card.dataset.lang!==filter;});
+}));
+
+// Command palette — Ctrl / Cmd + K, slash, arrows, enter, escape.
+const palette=$("command-palette"),input=$("command-input"),list=$("command-list");
+let priorFocus=null,selected=0,matches=[];
+const commands=[
+ {label:"Home",detail:"01 / Landing",href:"#home"},
+ {label:"Selected Work",detail:"02 / Four projects",href:"#work"},
+ {label:"Creative Lab",detail:"03 / Interactive experiments",href:"lab.html"},
+ {label:"About",detail:"04 / Backstory",href:"#about"},
+ {label:"Timeline",detail:"05 / Experience",href:"#now"},
+ {label:"Connect",detail:"06 / Co-op opportunities",href:"#contact"},
+ {label:"GitHub",detail:"External / Source code",href:"https://github.com/zuhayer03"},
+ {label:"LinkedIn",detail:"External / Professional profile",href:"https://www.linkedin.com/in/zuhayer-alam-faiyaz-8bb1a3442/"}
 ];
-let matches = commands.slice();
-let selection = 0;
-let priorFocus = null;
-function paintPalette() {
-  const query = cmdInput.value.trim().toLowerCase();
-  matches = commands.filter((item) => (item.label + " " + item.detail).toLowerCase().includes(query));
-  selection = Math.min(selection, Math.max(0, matches.length - 1));
-  cmdList.replaceChildren();
-  if (!matches.length) {
-    const empty = document.createElement("p");
-    empty.textContent = "No matching destination.";
-    empty.style.cssText = "padding:12px;color:#aebcce";
-    cmdList.appendChild(empty);
-  }
-  matches.forEach((item, index) => {
-    const row = document.createElement("button");
-    row.type = "button";
-    row.className = "palette-item" + (index === selection ? " selected" : "");
-    row.setAttribute("role", "option");
-    row.setAttribute("aria-selected", String(index === selection));
-    const name = document.createElement("span"); name.textContent = item.label;
-    const detail = document.createElement("small"); detail.textContent = item.detail;
-    row.append(name, detail);
-    row.addEventListener("mouseenter", () => { selection = index; cmdList.querySelectorAll(".palette-item").forEach((el, i) => { el.classList.toggle("selected", i === index); el.setAttribute("aria-selected", String(i === index)); }); });
-    row.addEventListener("click", () => navigate(item));
-    cmdList.appendChild(row);
-  });
+function paint(){
+ const q=input.value.trim().toLowerCase();matches=commands.filter(c=>(c.label+" "+c.detail).toLowerCase().includes(q));
+ selected=Math.max(0,Math.min(selected,matches.length-1));
+ list.replaceChildren();
+ if(!matches.length){const row=document.createElement("p");row.textContent="No matching destination.";row.style.cssText="padding:15px;color:#586558";list.appendChild(row);return;}
+ matches.forEach((c,i)=>{
+  const b=document.createElement("button");b.type="button";b.className="palette-item"+(i===selected?" selected":"");b.setAttribute("role","option");b.setAttribute("aria-selected",String(i===selected));
+  const title=document.createElement("span");title.textContent=c.label;
+  const meta=document.createElement("small");meta.textContent=c.detail;
+  b.append(title,meta);b.addEventListener("click",()=>navigate(c));
+  b.addEventListener("mouseenter",()=>{selected=i;[...list.children].forEach((child,j)=>{child.classList.toggle("selected",j===selected);child.setAttribute("aria-selected",String(j===selected));});});
+  list.appendChild(b);
+ });
 }
-function showPalette() {
-  priorFocus = document.activeElement;
-  palette.hidden = false;
-  document.body.style.overflow = "hidden";
-  cmdInput.value = "";
-  selection = 0;
-  paintPalette();
-  cmdInput.focus();
+function show(){priorFocus=document.activeElement;palette.hidden=false;document.body.style.overflow="hidden";input.value="";selected=0;paint();input.focus();}
+function hide(){palette.hidden=true;document.body.style.overflow="";if(priorFocus?.focus)priorFocus.focus();}
+function navigate(c){
+ hide();if(!c)return;
+ if(c.href.startsWith("#")){document.querySelector(c.href)?.scrollIntoView({behavior:reduceMotion?"auto":"smooth"});}
+ else if(c.href.startsWith("https:"))window.open(c.href,"_blank","noopener,noreferrer");
+ else window.location.href=c.href;
 }
-function hidePalette() {
-  palette.hidden = true;
-  document.body.style.overflow = "";
-  if (priorFocus && typeof priorFocus.focus === "function") priorFocus.focus();
-}
-function navigate(item) {
-  hidePalette();
-  if (!item) return;
-  if (item.href.startsWith("#")) {
-    const target = document.querySelector(item.href);
-    if (target) target.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth" });
-  } else window.open(item.href, "_blank", "noopener,noreferrer");
-}
-cmdLaunch.addEventListener("click", showPalette);
-cmdClose.addEventListener("click", hidePalette);
-palette.addEventListener("click", (event) => { if (event.target === palette) hidePalette(); });
-cmdInput.addEventListener("input", () => { selection = 0; paintPalette(); });
-document.addEventListener("keydown", (event) => {
-  const isTextInput = event.target instanceof HTMLElement &&
-    (event.target.closest("input,textarea,[contenteditable=true]") !== null);
-  if (!palette.hidden) {
-    if (event.key === "Escape") { event.preventDefault(); hidePalette(); }
-    if (event.key === "ArrowDown") { event.preventDefault(); selection = (selection + 1) % Math.max(1, matches.length); paintPalette(); }
-    if (event.key === "ArrowUp") { event.preventDefault(); selection = (selection - 1 + Math.max(1, matches.length)) % Math.max(1, matches.length); paintPalette(); }
-    if (event.key === "Enter") { event.preventDefault(); navigate(matches[selection]); }
-    if (event.key === "Tab") { event.preventDefault(); cmdInput.focus(); }
-    return;
-  }
-  if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
-    event.preventDefault(); showPalette();
-  } else if (event.key === "/" && !isTextInput && !event.ctrlKey && !event.metaKey) {
-    event.preventDefault(); showPalette();
-  }
+$("command-launch").addEventListener("click",show);
+$("command-close").addEventListener("click",hide);
+palette.addEventListener("click",event=>{if(event.target===palette)hide();});
+input.addEventListener("input",()=>{selected=0;paint();});
+document.addEventListener("keydown",event=>{
+ const target=event.target;
+ const typing=target instanceof HTMLElement&&Boolean(target.closest("input,textarea,[contenteditable=true]"));
+ if(!palette.hidden){
+  if(event.key==="Escape"){event.preventDefault();hide();}
+  else if(event.key==="ArrowDown"){event.preventDefault();selected=(selected+1)%Math.max(1,matches.length);paint();}
+  else if(event.key==="ArrowUp"){event.preventDefault();selected=(selected-1+Math.max(1,matches.length))%Math.max(1,matches.length);paint();}
+  else if(event.key==="Enter"){event.preventDefault();navigate(matches[selected]);}
+  else if(event.key==="Tab"){event.preventDefault();input.focus();}
+  return;
+ }
+ if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==="k"){event.preventDefault();show();}
+ else if(event.key==="/"&&!typing&&!event.ctrlKey&&!event.metaKey){event.preventDefault();show();}
 });
 
-// Light animated connection field: never intercepts clicks and stops when not visible.
-const canvas = document.getElementById("particles");
-const ctx = canvas && canvas.getContext("2d");
-if (ctx && !reducedMotion) {
-  let width = 0, height = 0, points = [], raf = 0;
-  function resize() {
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    width = window.innerWidth; height = window.innerHeight;
-    canvas.width = Math.round(width * dpr);
-    canvas.height = Math.round(height * dpr);
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const count = Math.min(58, Math.round(width / 24));
-    points = Array.from({ length: count }, () => ({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      vx: (Math.random() - .5) * .3,
-      vy: (Math.random() - .5) * .3,
-      r: Math.random() * 1.2 + .3
-    }));
-  }
-  function draw() {
-    ctx.clearRect(0, 0, width, height);
-    for (const p of points) {
-      p.x = (p.x + p.vx + width) % width;
-      p.y = (p.y + p.vy + height) % height;
-      ctx.fillStyle = "rgba(117,236,235,.45)";
-      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI); ctx.fill();
-    }
-    for (let i = 0; i < points.length; i++) {
-      for (let j = i + 1; j < points.length; j++) {
-        const a = points[i], b = points[j];
-        const distance = Math.hypot(a.x - b.x, a.y - b.y);
-        if (distance < 115) {
-          ctx.strokeStyle = "rgba(134,157,255," + ((1 - distance / 115) * .11) + ")";
-          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
-        }
-      }
-    }
-    raf = requestAnimationFrame(draw);
-  }
-  resize();
-  window.addEventListener("resize", resize, { passive: true });
-  document.addEventListener("visibilitychange", () => {
-    cancelAnimationFrame(raf);
-    if (!document.hidden) draw();
-  });
-  draw();
+// Gently move the hero illustration with the pointer. Motion opt-out respected.
+const art=document.querySelector(".art-stage");
+if(art&&!reduceMotion&&window.matchMedia("(hover:hover)").matches){
+ const surface=document.querySelector(".bento-art");
+ let raf=0;
+ surface.addEventListener("pointermove",event=>{
+  const rect=surface.getBoundingClientRect();
+  const x=(event.clientX-rect.left)/rect.width-.5;
+  const y=(event.clientY-rect.top)/rect.height-.5;
+  if(raf)cancelAnimationFrame(raf);
+  raf=requestAnimationFrame(()=>{art.style.transform="translate("+(-x*15)+"px,"+(-y*15)+"px)";});
+ });
+ surface.addEventListener("pointerleave",()=>{if(raf)cancelAnimationFrame(raf);art.style.transform="";});
 }
