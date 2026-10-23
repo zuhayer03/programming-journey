@@ -1,14 +1,55 @@
-# Network Monitor
+<div align="center">
 
-Beginner-friendly Python TCP connectivity monitor. Checks configured host/port pairs, measures connection time on success, and exports CSV and JSON reports.
+<img src="../../assets/cards/network-monitor.svg" width="100%" alt="Network Monitor original project banner" />
 
-## Run
+**Working student project** · Python 3.9+ · [← All projects](../README.md) · [↗ Developer profile](https://github.com/zuhayer03)
+
+</div>
+
+## What it does
+
+A small, standard-library Python tool for checking configured TCP host/port connections. It measures connection time when a connection succeeds and exports structured reports.
+
+### Features
+
+- Load host/port targets from `targets.json`
+- Attempt TCP connections and record results
+- Export CSV and JSON reports to `output/`
+- Run the included unit tests
+
+## Run locally
+
+Open a terminal in the `projects/network-monitor` directory.
 
 ```bash
 python monitor.py
-python -m unittest discover -p "test_*.py"
+python -m unittest discover -p 'test_*.py'
 ```
 
-Edit `targets.json` for your own services. Reports appear in `output/latest.csv` and `output/latest.json`. A DOWN result can mean a blocked port or unreachable service; this is **not** an ICMP ping, network-wide uptime monitor, or intrusion-detection system.
+**Input:** Edit `targets.json` and run the monitor from this directory.
 
-Python 3.9+; standard library only. Use only services you own or are permitted to test.
+**Output:** `output/latest.csv` and `output/latest.json`
+
+## How it works
+
+```text
+Input / configuration
+       ↓
+Local program logic
+       ↓
+Connection checks + records
+       ↓
+CSV / JSON report
+```
+
+## Limits and safety
+
+A TCP connection check is not ICMP ping, network-wide uptime monitoring, or an intrusion detection system. A DOWN result can also reflect a blocked port. Test only authorized targets.
+
+## Next improvement
+
+Enhance error messages and improve reporting, without overstating monitoring coverage.
+
+---
+
+<sub>Built for learning and for honest, inspectable software engineering portfolio work. See the source and test files in this directory.</sub>
