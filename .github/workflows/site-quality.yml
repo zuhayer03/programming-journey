@@ -28,6 +28,8 @@ jobs:
         run: |
           node --check docs/script.js
           node --check docs/lab.js
+          node --check docs/universe.js
+          node --check docs/scene.js
       - name: Check document structure and local assets
         run: |
           python3 - <<'PY'
@@ -37,6 +39,7 @@ jobs:
 
           root = Path("docs")
           pages = [root / "index.html", root / "lab.html"]
+          required = {"index.html": ["hero-webgl", "tool-list", "tool-search", "tool-inspector", "command-palette"], "lab.html": ["sort-bars", "event-stream", "budget-remaining", "network-simulator", "net-run"]}
           class Reader(HTMLParser):
               def __init__(self):
                   super().__init__()
@@ -58,6 +61,8 @@ jobs:
               p = Reader()
               p.feed(page.read_text(encoding="utf-8"))
               assert p.title_seen, f"Missing title: {page}"
+              for required_id in required[page.name]:
+                  assert required_id in p.ids, f"{page}: missing essential feature #{required_id}"
               for ref in p.refs:
                   parsed = urlsplit(ref)
                   if parsed.scheme or parsed.netloc or ref.startswith("//") or ref.startswith("mailto:"):
