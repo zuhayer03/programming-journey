@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101913"><meta name="description" content="Draw your own GitHub-inspired contribution pixel art without changing real commits. Interactive 53x7 canvas with SVG export.">
+<title>Contribution Constellation — Z✳F Creative Lab</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="constellation.css">
+</head><body>
+<a class="skip" href="#studio">Skip to editor</a>
+<header><a class="logo" href="index.html">Z<span>✳</span>F</a><span>DESIGN / EXPERIMENT / 005</span><a href="lab.html">← BACK TO LAB</a></header>
+<main>
+<section class="hero"><div class="hero-eyebrow">AN INTERACTIVE CONTRIBUTION ART EXPERIMENT <span>NO FAKE COMMITS · JUST DESIGN</span></div>
+<h1>CODE THE<br><em>CONSTELLATION.</em></h1>
+<p>Inspired by the familiar GitHub contribution grid—but this one is an honest pixel-art canvas. Draw a pattern, try a preset, and export your own SVG. Nothing touches your real GitHub activity.</p>
+</section>
+<section id="studio" class="studio">
+<div class="studio-header"><span><i class="light"></i> LOCAL PIXEL DESIGNER</span><span>53 COLUMNS × 7 ROWS</span></div>
+<div class="canvas-shell"><div class="canvas-title"><span>ACTIVITY INSPIRED / ARTWORK ONLY</span><span id="paint-status" aria-live="polite">CUSTOMIZE THE GRID</span></div>
+<div class="grid-container"><canvas id="art-canvas" width="1060" height="140" tabindex="0" aria-label="Contribution-inspired drawing grid. Use pointer to paint or focus and use arrow keys, Space to paint." role="img"></canvas></div>
+<div class="canvas-footer"><span>← 53 WEEKS →</span><span>NOT REAL ACTIVITY</span></div>
+</div>
+<div class="editor"><div class="editor-panel"><h2>CHOOSE A PATTERN</h2><div class="preset-grid"><button class="preset active" type="button" data-preset="zf">Z✳F / SIGNATURE</button><button class="preset" type="button" data-preset="heart">♥ / HEART</button><button class="preset" type="button" data-preset="wave">〰 / SIGNAL WAVE</button><button class="preset" type="button" data-preset="blank">○ / BLANK CANVAS</button></div></div>
+<div class="editor-panel"><h2>PAINT A COLOR</h2><div class="swatches" role="group" aria-label="Paint colors"><button class="swatch selected" type="button" data-color="4" aria-label="Bright lime" title="Bright lime" style="--swatch:#d9ff65"></button><button class="swatch" type="button" data-color="3" aria-label="Soft teal" title="Soft teal" style="--swatch:#9cebd2"></button><button class="swatch" type="button" data-color="2" aria-label="Medium green" title="Medium green" style="--swatch:#428d70"></button><button class="swatch" type="button" data-color="1" aria-label="Dark green" title="Dark green" style="--swatch:#295a47"></button><button class="swatch" type="button" data-color="0" aria-label="Eraser" title="Eraser" style="--swatch:#19291f"></button></div><p>Click or drag across squares to paint. Keyboard: focus the grid, use arrow keys to move, Space to paint.</p></div>
+<div class="editor-panel actions"><h2>YOUR CREATION</h2><div class="action-buttons"><button type="button" id="export-svg" class="download">EXPORT SVG ↗</button><button type="button" id="reset-preset" class="secondary">RESET PATTERN ↺</button></div><small>SVG file is generated in your browser. No upload, GitHub changes or hidden commit scripts.</small></div></div>
+</section>
+<section class="context"><span>ABOUT THE IDEA</span><h2>MAKE THE GRAPH<br><em>LOOK INTERESTING.</em><br>KEEP IT REAL.</h2><p>Some tutorials suggest adding artificial commits to fill GitHub's contribution calendar. That can make a portfolio misleading. This canvas gives you custom visuals without pretending you've worked on days you haven't. Your real contribution graph is still showcased by the snake and Pac-Man animations on <a href="https://github.com/zuhayer03">my GitHub profile ↗</a>.</p><a class="back-home" href="index.html">EXPLORE MY PORTFOLIO ↗</a></section>
+</main><footer><span>Z✳F / CREATIVE ENGINEERING</span><span>DESIGN ART ≠ GIT ACTIVITY</span><a href="arcade.html">PLAY THE ARCADE ↗</a></footer>
+<script src="constellation.js" defer></script></body></html>
