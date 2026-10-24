@@ -52,6 +52,44 @@
   if(!list||!input)return;
   let category="all",selected="Java",renderCount=0;
   const initials=(n)=>n.split(/[\s-]+/).map(x=>x[0]).slice(0,2).join("").toUpperCase();
+  const logoSources={
+  "Java": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+  "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+  "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+  "GitHub": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+  "VS Code": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
+  "IntelliJ IDEA": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg",
+  "Cursor": "https://www.google.com/s2/favicons?domain=cursor.com&sz=128",
+  "GitHub Copilot": "https://cdn.simpleicons.org/githubcopilot/8A8A8A",
+  "Claude Code": "https://www.google.com/s2/favicons?domain=claude.ai&sz=128",
+  "Google Antigravity": "https://www.google.com/s2/favicons?domain=antigravity.google&sz=128",
+  "LangGraph": "https://www.google.com/s2/favicons?domain=langchain.com&sz=128",
+  "Google ADK": "https://www.google.com/s2/favicons?domain=google.com&sz=128",
+  "LiveKit Agents": "https://www.google.com/s2/favicons?domain=livekit.io&sz=128",
+  "Browser Use": "https://www.google.com/s2/favicons?domain=browser-use.com&sz=128",
+  "Composio": "https://www.google.com/s2/favicons?domain=composio.dev&sz=128",
+  "Paperclip": "https://www.google.com/s2/favicons?domain=paperclip.ing&sz=128",
+  "Hugging Face": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=128",
+  "Ollama": "https://www.google.com/s2/favicons?domain=ollama.com&sz=128",
+  "Supabase AI": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+  "E2B": "https://www.google.com/s2/favicons?domain=e2b.dev&sz=128",
+  "CodeRabbit": "https://www.google.com/s2/favicons?domain=coderabbit.ai&sz=128",
+  "LangSmith": "https://www.google.com/s2/favicons?domain=smith.langchain.com&sz=128",
+  "Sentry Seer": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sentry/sentry-original.svg",
+  "Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+  "Notion": "https://www.google.com/s2/favicons?domain=notion.so&sz=128",
+  "NotebookLM": "https://www.google.com/s2/favicons?domain=notebooklm.google.com&sz=128",
+  "Perplexity": "https://www.google.com/s2/favicons?domain=perplexity.ai&sz=128",
+  "LeetCode": "https://www.google.com/s2/favicons?domain=leetcode.com&sz=128",
+  "NeetCode": "https://www.google.com/s2/favicons?domain=neetcode.io&sz=128"
+};
+  function createLogo(name){
+    const icon=document.createElement("img");
+    icon.className="tool-logo";
+    icon.src=logoSources[name];icon.alt="";icon.loading="lazy";icon.decoding="async";
+    icon.width=30;icon.height=30;
+    return icon;
+  }
   function selectTool(name){
     const item=tools.find(t=>t.name===name);
     if(!item)return;
@@ -78,7 +116,10 @@
       button.type="button";button.className="tool-chip"+(t.name===selected?" is-selected":"");
       button.dataset.tool=t.name;button.setAttribute("aria-pressed",String(t.name===selected));
       button.title=t.description;
-      const symbol=document.createElement("span");symbol.className="tool-symbol";symbol.textContent=initials(t.name);
+      const symbol=document.createElement("span");symbol.className="tool-symbol";
+      const icon=createLogo(t.name);
+      icon.addEventListener("error",()=>{icon.remove();symbol.textContent=initials(t.name);},{once:true});
+      symbol.appendChild(icon);
       const meta=document.createElement("span");meta.className="tool-chip-meta";
       const strong=document.createElement("strong");strong.textContent=t.name;
       const small=document.createElement("small");small.textContent=t.status;
@@ -100,6 +141,13 @@
     draw();
   }));
   input.addEventListener("input",draw);
+  document.querySelectorAll(".orbit-node").forEach(button=>{
+    const fallback=button.textContent;
+    const image=createLogo(button.dataset.tool);
+    image.classList.add("orbit-logo");
+    image.addEventListener("error",()=>{image.remove();button.textContent=fallback;},{once:true});
+    button.replaceChildren(image);
+  });
   document.querySelectorAll(".orbit-node").forEach(button=>button.addEventListener("click",()=>{
     selectTool(button.dataset.tool);
     if(window.matchMedia("(max-width:900px)").matches)inspector.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth",block:"nearest"});
