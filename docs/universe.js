@@ -170,4 +170,126 @@
     });
     scene.addEventListener("pointerleave",()=>{scene.style.setProperty("--scene-x","0deg");scene.style.setProperty("--scene-y","0deg");});
   }
+
+  // STACK ARCHITECT — users build a local selection. Never implies those tools
+  // are all part of a completed or deployed engineering project.
+  const stackList=[];
+  const presets={
+    java:["Java","Git","GitHub","IntelliJ IDEA","LeetCode"],
+    agents:["Python","Cursor","LangGraph","Hugging Face","E2B","LangSmith"],
+    product:["Figma","Notion","Python","GitHub","Supabase AI"]
+  };
+  const stackMax=7;
+  const stackVisual=document.getElementById("stack-visual");
+  const stackFeedback=document.getElementById("stack-feedback");
+  const stackCount=document.getElementById("stack-count");
+  const stackLabel=document.getElementById("stack-label");
+  const addButton=document.getElementById("stack-add");
+  let activePreset="";
+  const setFeedback=(message)=>{stackFeedback.textContent=message;};
+  const setPresetActive=()=>{
+    document.querySelectorAll(".stack-preset").forEach(button=>{
+      const active=button.dataset.stackPreset===activePreset;
+      button.classList.toggle("active",active);
+      button.setAttribute("aria-pressed",String(active));
+    });
+  };
+  function renderStack(){
+    stackVisual.replaceChildren();
+    stackCount.textContent=stackList.length+" / "+stackMax;
+    stackLabel.textContent=activePreset?({java:"JAVA / DSA",agents:"AGENT PROTOTYPE",product:"PRODUCT WORKFLOW"})[activePreset]:"CUSTOM";
+    if(!stackList.length){
+      const p=document.createElement("p");p.className="stack-empty";
+      p.textContent="Select a mission or add tools above to construct your stack.";
+      stackVisual.appendChild(p);
+    }
+    stackList.forEach((name,i)=>{
+      const block=document.createElement("div");block.className="stack-step";
+      const count=document.createElement("span");count.className="stack-step-number";count.textContent=String(i+1).padStart(2,"0");
+      const logo=createLogo(name);logo.classList.add("stack-step-logo");
+      logo.addEventListener("error",()=>{logo.replaceWith(document.createTextNode(initials(name)));},{once:true});
+      const label=document.createElement("strong");label.textContent=name;
+      const remove=document.createElement("button");remove.type="button";remove.textContent="×";
+      remove.className="stack-step-remove";remove.setAttribute("aria-label","Remove "+name+" from stack");
+      remove.addEventListener("click",()=>{
+        stackList.splice(i,1);activePreset="";setPresetActive();renderStack();setFeedback(name+" removed.");
+      });
+      block.append(count,logo,label,remove);stackVisual.appendChild(block);
+      if(i<stackList.length-1){const arrow=document.createElement("span");arrow.className="stack-flow-arrow";arrow.textContent="→";stackVisual.appendChild(arrow);}
+    });
+    if(addButton){
+      const inStack=stackList.includes(selected);
+      addButton.disabled=inStack||stackList.length>=stackMax;
+      addButton.textContent=inStack?"✓ ALREADY INCLUDED":stackList.length>=stackMax?"MAXIMUM 7 TOOLS":"＋ ADD TO STACK";
+    }
+  }
+  if(addButton) addButton.addEventListener("click",()=>{
+    if(stackList.includes(selected)){setFeedback("This tool is already in your stack.");return;}
+    if(stackList.length>=stackMax){setFeedback("Maximum 7 tools. Remove one first.");return;}
+    stackList.push(selected);activePreset="";setPresetActive();renderStack();setFeedback(selected+" added.");
+  });
+  // Keep the add control synced with the currently inspected tool.
+  const originalSelectTool=selectTool;
+  // Existing selectTool is a declared function and isn't reassigned; update
+  // the add button with event delegation after tool selection settles.
+  document.querySelectorAll(".orbit-node").forEach(button=>
+    button.addEventListener("click",renderStack));
+  list.addEventListener("click",(e)=>{
+    if(e.target instanceof Element&&e.target.closest(".tool-chip"))renderStack();
+  });
+  document.querySelectorAll(".stack-preset").forEach(button=>button.addEventListener("click",()=>{
+    const type=button.dataset.stackPreset;
+    stackList.splice(0,stackList.length,...presets[type]);
+    activePreset=type;setPresetActive();renderStack();
+    setFeedback("Preset loaded. Add or remove tools to customize.");
+  }));
+  document.getElementById("stack-clear")?.addEventListener("click",()=>{
+    stackList.splice(0);activePreset="";setPresetActive();renderStack();setFeedback("Workflow cleared.");
+  });
+  const stackText=()=>stackList.length?"Z✳F Tool Workflow: "+stackList.join(" → "):"";
+  async function copyStack(){
+    const message=stackText();
+    if(!message){setFeedback("Select at least one tool.");return;}
+    try{
+      if(!navigator.clipboard?.writeText)throw Error("Clipboard API unavailable");
+      await navigator.clipboard.writeText(message);
+      setFeedback("Stack copied! Paste it into your notes or README.");
+    }catch(_){
+      const t=document.createElement("textarea");t.value=message;t.style.cssText="position:fixed;top:-1000px;opacity:0";
+      document.body.appendChild(t);t.focus();t.select();
+      const ok=document.execCommand("copy");t.remove();
+      setFeedback(ok?"Stack copied!":"Copy blocked by your browser. Tool sequence: "+stackList.join(" → "));
+    }
+  }
+  document.getElementById("stack-copy")?.addEventListener("click",copyStack);
+  const esc=(s)=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+  document.getElementById("stack-svg")?.addEventListener("click",()=>{
+    if(!stackList.length){setFeedback("Select tools before exporting.");return;}
+    const width=1160,height=340;
+    let cards="";
+    const perRow=4,w=260,h=80,gap=22;
+    stackList.forEach((name,i)=>{
+      const col=i%perRow,row=Math.floor(i/perRow);
+      const x=28+col*(w+gap),y=94+row*(h+35);
+      const kind=tools.find(t=>t.name===name)?.category||"core";
+      const accent=({core:"#D9FF65",coding:"#BDA6FF",agents:"#94EACC",infra:"#82CBDD",quality:"#F5A7C7",creative:"#F8B78E",practice:"#A0D989"})[kind];
+      cards+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="12" fill="#213129" stroke="'+accent+'" stroke-width="2"/>';
+      cards+='<text x="'+(x+15)+'" y="'+(y+26)+'" font-size="14" font-family="monospace" fill="'+accent+'">'+String(i+1).padStart(2,"0")+' / '+esc(kind.toUpperCase())+'</text>';
+      cards+='<text x="'+(x+15)+'" y="'+(y+58)+'" font-size="21" font-weight="700" font-family="Arial,sans-serif" fill="#F6FBEF">'+esc(name)+'</text>';
+    });
+    const svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+width+'" height="'+height+'" viewBox="0 0 '+width+' '+height+'">'+
+      '<rect width="'+width+'" height="'+height+'" rx="18" fill="#111C17"/>'+
+      '<text x="28" y="45" font-size="27" font-weight="700" font-family="Arial,sans-serif" fill="#D9FF65">Z✳F / STACK ARCHITECT</text>'+
+      '<text x="1105" y="45" text-anchor="end" font-size="14" font-family="monospace" fill="#C1D7C2">'+stackList.length+' TOOLS</text>'+
+      cards+'<text x="28" y="317" font-family="monospace" font-size="12" fill="#9DB5A4">INTERACTIVE DESIGN / NOT A CLAIM OF IMPLEMENTATION OR EXPERTISE</text>'+
+      '</svg>';
+    const blob=new Blob([svg],{type:"image/svg+xml;charset=utf-8"});
+    const url=URL.createObjectURL(blob);const anchor=document.createElement("a");
+    anchor.href=url;anchor.download="zf-custom-tool-stack.svg";
+    document.body.appendChild(anchor);anchor.click();anchor.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),1500);
+    setFeedback("SVG exported to your downloads.");
+  });
+  setPresetActive();renderStack();
+
 })();
