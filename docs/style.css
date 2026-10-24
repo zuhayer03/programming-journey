@@ -134,3 +134,65 @@ footer{padding:25px 3.5vw;display:flex;justify-content:space-between;gap:20px;fo
 .lab-chip.four{width:31%;height:26%;left:9%;bottom:4%;transform:rotate(8deg);background:#c4e8ce;display:flex;flex-direction:column;padding:13px}
 .lab-chip.four strong{font-size:52px;line-height:1}.lab-chip.four small{font:500 9px var(--mono)}
 @media(max-width:700px){.lab-chip.four{width:34%;height:25%;bottom:8%;left:5%}}
+
+
+/* PROJECT THEATER / editorial presentation experience */
+.showcase-intro{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:15px 0 24px;border-top:1px solid var(--outline);margin-top:6px}
+.showcase-label{display:flex;align-items:center;gap:11px;font:500 11px var(--mono);color:var(--muted);letter-spacing:.04em}
+.showcase-pulse{width:8px;height:8px;border-radius:50%;background:#9fbd43;box-shadow:0 0 0 5px #b0da4340;animation:signal 2.6s ease-in-out infinite}
+.theater-launch{display:inline-flex;align-items:center;gap:25px;justify-content:space-between;border:1px solid var(--ink);background:var(--lime);color:#1a2013;border-radius:100px;padding:13px 20px;font:600 11px var(--mono);transition:transform .2s,box-shadow .2s}
+.theater-launch:hover{transform:translateY(-3px);box-shadow:6px 7px 0 #788b3c30}
+.theater-launch span{font-size:18px}
+.project-theater{position:fixed;inset:0;width:min(1120px,calc(100vw - 34px));max-width:none;max-height:calc(100dvh - 40px);padding:0;border:1px solid #658061;background:#171c19;color:#f3f6ed;border-radius:20px;box-shadow:0 45px 140px #071307b5;overflow:auto;overscroll-behavior:contain}
+.project-theater::backdrop{background:#060d0de6;backdrop-filter:blur(12px)}
+.theater-shell{padding:24px 26px 19px;min-height:490px}
+.theater-heading,.theater-heading-right{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.theater-heading{border-bottom:1px solid #3d5244;padding-bottom:20px}
+.theater-brand{font-weight:700;font-size:25px;letter-spacing:-.12em;white-space:nowrap}
+.theater-brand span{color:#d9ff65;padding:0 5px}
+.theater-brand small{font:500 10px var(--mono);letter-spacing:.01em;margin-left:13px;color:#a9bbaf}
+.theater-label{font:500 11px var(--mono);color:#abbfac}.theater-label strong{color:#d9ff65}
+.theater-close{background:transparent;color:#f2f6ec;border:1px solid #627463;border-radius:100px;padding:10px 16px;font:500 10px var(--mono)}
+.theater-close:hover{background:#d9ff65;color:#111b11}
+.theater-main{display:grid;grid-template-columns:.95fr 1.05fr;gap:20px;min-height:530px;padding:23px 0 22px}
+.theater-description{display:flex;flex-direction:column;align-items:flex-start;min-width:0;padding:16px 13px 12px}
+.theater-eyebrow{font:500 12px var(--mono);color:#d9ff65;letter-spacing:.02em}
+.theater-description h2{white-space:pre-line;font-size:clamp(50px,6vw,90px);letter-spacing:-.09em;line-height:.95;margin:28px 0}
+.theater-description>p{font-size:16px;line-height:1.7;color:#c0cdc2;max-width:460px;margin:0 0 25px}
+.theater-meta{display:flex;align-items:flex-start;gap:16px;margin:7px 0}
+.theater-meta>span{min-width:125px;color:#a2baaa;font:500 10px var(--mono);padding-top:4px}
+.theater-meta>strong{font:500 12px/1.6 var(--mono);color:#f0f8ee}
+.theater-source{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:35px;background:#d9ff65;color:#1a2418;padding:16px 20px;border-radius:100px;font:600 12px var(--mono);transition:transform .2s}
+.theater-source span{font-size:19px}
+.theater-source:hover{transform:translateY(-4px)}
+.theater-visual{border:1px solid #4a6150;border-radius:15px;position:relative;overflow:hidden;min-height:390px;background:radial-gradient(circle at 48% 46%,#345b4e,#162f2d 54%,#111f1e);isolation:isolate;perspective:900px}
+.theater-visual:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff0d 1px,transparent 1px),linear-gradient(90deg,#ffffff0d 1px,transparent 1px);background-size:36px 36px;transform:rotateX(18deg) scale(1.15);pointer-events:none}
+.theater-main[data-project="finance"] .theater-visual{background:radial-gradient(circle at 49% 45%,#9a7dba,#4c3768 54%,#2d253a)}
+.theater-main[data-project="algo"] .theater-visual{background:radial-gradient(circle at 49% 48%,#efb991,#b86f4c 56%,#723e2e)}
+.theater-main[data-project="threat"] .theater-visual{background:radial-gradient(circle at 49% 48%,#8db9a1,#477c68 56%,#1d4239)}
+.theater-plane{position:absolute;inset:18px;transform-style:preserve-3d;display:grid;place-items:center;transform:rotateX(7deg) rotateY(-13deg);transition:transform .5s}
+.theater-visual:hover .theater-plane{transform:rotateX(-3deg) rotateY(9deg) translateZ(16px)}
+.theater-stage-art{position:relative;width:min(79%,360px);aspect-ratio:1}
+.cinema-network-orbit{position:absolute;inset:9%;border:2px dashed #c7ffc9bd;border-radius:50%;box-shadow:0 0 70px #baffad44;animation:spin 26s linear infinite}
+.cinema-network-orbit:before{content:"";position:absolute;inset:16%;border:1px solid #b8ffc7ab;border-radius:50%}
+.cinema-network-core{position:absolute;inset:34%;display:grid;place-items:center;background:#b7f5d6;color:#1f493a;border-radius:50%;font:800 30px var(--mono);box-shadow:8px 20px 30px #0a201e8b;transform:rotate(-15deg)}
+.cinema-network-dot{position:absolute;background:#dbff65;width:19px;height:19px;border-radius:50%;box-shadow:0 0 15px #d9ff65}
+.cinema-network-dot.n0{top:2%;left:47%}.cinema-network-dot.n1{top:47%;right:2%}.cinema-network-dot.n2{bottom:3%;left:47%}.cinema-network-dot.n3{top:47%;left:2%}
+.cinema-finance-bars,.cinema-algo-bars{position:absolute;inset:13%;display:flex;align-items:flex-end;justify-content:center;gap:12px;padding-bottom:12px}
+.cinema-data-bar{flex:1;max-width:40px;display:block;border-radius:7px 7px 0 0;background:#f2e3ff;border:1px solid #f7e9ff;box-shadow:6px 12px 1px #21192a59;transform:translateZ(10px);animation:cinemaBar 2s ease-in-out infinite alternate;animation-delay:calc(var(--index)*.11s)}
+.cinema-algo-bars .cinema-data-bar{background:#212a24;border:1px solid #475c3f;box-shadow:6px 12px 1px #75422f59}
+.cinema-art-label{position:absolute;bottom:5%;left:0;right:0;text-align:center;font:600 11px var(--mono);letter-spacing:.12em;color:#faf5db}
+.cinema-shield{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-8deg);width:61%;height:77%;background:#213a31;clip-path:polygon(50% 0,96% 17%,92% 72%,50% 100%,8% 72%,4% 17%);display:grid;place-items:center;font:900 210px var(--font);color:#d9ff65;text-shadow:0 20px 12px #080e0a5c;box-shadow:20px 30px 0 #0005}
+.theater-visual-index{position:absolute;left:25px;bottom:23px;font:500 10px var(--mono);color:#e9fae1;z-index:4}
+.theater-footer{display:flex;justify-content:space-between;align-items:center;padding:17px 0;border-top:1px solid #3d5244;gap:15px}
+.theater-footer>button{border:1px solid #758875;padding:11px 18px;border-radius:100px;background:transparent;color:#e8f2e8;font:600 11px var(--mono)}
+.theater-footer>button:hover{background:#d9ff65;color:#172215}
+.theater-dots{display:flex;gap:10px;justify-content:center}
+.theater-dot{width:10px;height:10px;border:1px solid #9ea999;border-radius:50%;background:transparent;padding:0}
+.theater-dot.active{background:#d9ff65;border-color:#d9ff65;box-shadow:0 0 0 4px #d9ff6528}
+.theater-shortcut{text-align:center;color:#8fa391;font:500 10px var(--mono);padding-bottom:5px}
+.theater-shortcut a{color:#d9ff65}
+@keyframes cinemaBar{to{transform:translateY(-13px) translateZ(20px)}}
+@media(max-width:860px){.theater-main{grid-template-columns:1fr}.theater-visual{min-height:330px}.theater-description h2{font-size:clamp(55px,9vw,85px)}.theater-description{min-height:365px}.theater-shell{padding:18px}.theater-main{padding-top:5px}.theater-visual-index{bottom:12px}.theater-plane{inset:0}.theater-main{gap:10px}}
+@media(max-width:530px){.theater-brand small{display:none}.theater-label{display:none}.theater-description h2{font-size:55px}.theater-description{min-height:400px;padding:18px 2px 12px}.theater-visual{min-height:260px}.theater-shortcut{line-height:1.7;font-size:9px}.theater-source{font-size:10px}.theater-meta{flex-direction:column;gap:0}.theater-main{gap:5px}.theater-shell{padding:13px}.theater-heading{padding-bottom:12px}.showcase-intro{gap:10px}.theater-launch{width:100%}}
+@media(prefers-reduced-motion:reduce){.cinema-network-orbit,.cinema-data-bar{animation:none!important}.theater-plane,.theater-visual:hover .theater-plane{transform:none!important;transition:none!important}}
