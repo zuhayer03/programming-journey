@@ -225,3 +225,18 @@ footer{padding:25px 3.5vw;display:flex;justify-content:space-between;gap:20px;fo
 .tool-chip{min-height:63px}
 .tool-chip.is-selected .tool-symbol{background:#eef8ce}
 @media(max-width:700px){.orbit-node{width:42px;height:42px}.orbit-node .tool-logo{width:26px;height:26px}.tool-symbol .tool-logo{width:26px;height:26px}}
+
+/* Interactive contribution-art studio entry point */
+.pixel-promo{margin:30px 3.5vw 65px;padding:28px 34px;border:1px solid #aebc9d;border-radius:20px;background:#e5e8df;color:#1c2a1d;display:grid;grid-template-columns:170px 1fr auto;align-items:center;gap:27px}
+.pixel-promo-grid{height:122px;border-radius:12px;background:#14251b;display:flex;align-items:center;justify-content:center;gap:9px;box-shadow:9px 9px 0 #a1ae92;perspective:800px}
+.pixel-promo-grid span{background:#d9ff65;color:#12311d;padding:12px 13px;border-radius:8px;font:700 32px var(--mono);box-shadow:5px 5px 0 #3b6b4c;transform:rotate(-8deg)}
+.pixel-promo-grid span:nth-child(2){background:#a0e9bb;transform:rotate(8deg)}
+.pixel-promo-grid span:nth-child(3){background:#b6a2db;transform:rotate(-4deg)}
+.pixel-promo small{font:500 10px var(--mono);color:#42633f}
+.pixel-promo h2{font-size:clamp(24px,2.6vw,41px);line-height:1.08;letter-spacing:-.075em;margin:12px 0}
+.pixel-promo h2 em{font-style:normal;color:#759b31}
+.pixel-promo p{font-size:13px;max-width:640px;margin:0;color:#426044}
+.pixel-promo>a{background:#1b2c1e;color:#e9ffcc;border-radius:40px;padding:16px 19px;white-space:nowrap;font:600 11px var(--mono)}
+.pixel-promo>a:hover{background:#4b6c38}
+@media(max-width:1060px){.pixel-promo{grid-template-columns:130px 1fr}.pixel-promo>a{grid-column:2;justify-self:start}.pixel-promo-grid{height:125px}.pixel-promo-grid span{font-size:23px;padding:10px}}
+@media(max-width:700px){.pixel-promo{margin:25px 17px 55px;padding:22px;grid-template-columns:1fr}.pixel-promo-grid{width:160px;height:110px}.pixel-promo>a{grid-column:1}}
