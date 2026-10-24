@@ -31,6 +31,7 @@ jobs:
           node --check docs/universe.js
           node --check docs/scene.js
           node --check docs/showcase.js
+          node --check docs/arcade.js
       - name: Check document structure and local assets
         run: |
           python3 - <<'PY'
@@ -39,8 +40,8 @@ jobs:
           from urllib.parse import urlsplit, unquote
 
           root = Path("docs")
-          pages = [root / "index.html", root / "lab.html"]
-          required = {"index.html": ["hero-webgl", "tool-list", "tool-search", "tool-inspector", "command-palette", "project-theater", "open-theater", "theater-next", "theater-prev"], "lab.html": ["sort-bars", "event-stream", "budget-remaining", "network-simulator", "net-run"]}
+          pages = [root / "index.html", root / "lab.html", root / "arcade.html"]
+          required = {"index.html": ["hero-webgl", "tool-list", "tool-search", "tool-inspector", "command-palette", "project-theater", "open-theater", "theater-next", "theater-prev"], "lab.html": ["sort-bars", "event-stream", "budget-remaining", "network-simulator", "net-run"], "arcade.html": ["maze", "score", "game-overlay", "play-button", "restart-button", "pause-button"]}
           class Reader(HTMLParser):
               def __init__(self):
                   super().__init__()
