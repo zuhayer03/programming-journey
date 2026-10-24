@@ -288,3 +288,33 @@ footer{padding:25px 3.5vw;display:flex;justify-content:space-between;gap:20px;fo
 @media(max-width:970px){.stack-lab-body{grid-template-columns:1fr}.stack-presets{border-right:0;border-bottom:1px solid #47614c}.stack-lab-head{padding:33px}.stack-presets{padding:28px}.stack-preview{padding:28px}}
 @media(max-width:700px){.stack-lab{border-radius:16px}.stack-lab-head{padding:25px;flex-direction:column;gap:15px}.stack-lab-head h3{font-size:clamp(39px,9vw,63px)}.stack-lab-counter{font-size:15px}.stack-presets,.stack-preview{padding:19px}.stack-visual{min-height:215px;padding:12px}.stack-step{padding:8px 24px 8px 7px}.stack-step strong{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.stack-step{animation:none!important;transform:none!important}}
+
+/* Animated tool universe — real hover and keyboard interactions on the site.
+   GitHub README uses self-contained animated GIF files instead. */
+.tool-chip{position:relative;isolation:isolate;overflow:hidden}
+.tool-chip::before{content:"";position:absolute;inset:-2px;z-index:-1;background:linear-gradient(120deg,transparent 20%,#e7ff9445 40%,transparent 62%);transform:translateX(-145%);transition:transform .75s ease}
+.tool-chip:is(:hover,:focus-visible)::before{transform:translateX(145%)}
+.tool-chip .tool-logo{animation:toolLogoFloat 3.6s ease-in-out infinite}
+.tool-chip:nth-child(5n+1) .tool-logo{animation-delay:-1.3s}
+.tool-chip:nth-child(5n+2) .tool-logo{animation-delay:-2.7s}
+.tool-chip:nth-child(5n+3) .tool-logo{animation-delay:-.7s}
+.tool-chip:nth-child(5n+4) .tool-logo{animation-delay:-3.2s}
+.tool-chip:nth-child(5n) .tool-logo{animation-delay:-1.9s}
+.tool-chip:is(:hover,:focus-visible) .tool-logo{animation:toolLogoHover .65s cubic-bezier(.25,.7,.2,1) infinite alternate;filter:drop-shadow(0 5px 7px #a1ce4670)}
+.tool-chip:is(:hover,:focus-visible) .tool-symbol{transform:translateY(-2px) rotate(-3deg);border-color:#afd44b;box-shadow:0 8px 22px #82b33d35}
+.tool-chip .tool-symbol{transition:transform .3s,box-shadow .3s,border-color .3s}
+.orbit-node .orbit-logo{animation:toolLogoFloat 3.5s ease-in-out infinite}
+.orbit-node:nth-child(2n) .orbit-logo{animation-delay:-1.6s}
+.orbit-node:is(:hover,:focus-visible) .orbit-logo{animation:toolLogoHover .7s ease-in-out infinite alternate}
+@keyframes toolLogoFloat{
+  0%,100%{transform:translate3d(0,1px,0) rotate(-1deg)}
+  50%{transform:translate3d(0,-3px,0) rotate(2deg)}
+}
+@keyframes toolLogoHover{
+  from{transform:translate3d(0,0,0) rotate(-5deg) scale(1.05)}
+  to{transform:translate3d(0,-4px,0) rotate(5deg) scale(1.14)}
+}
+@media(prefers-reduced-motion:reduce){
+  .tool-chip .tool-logo,.orbit-node .orbit-logo{animation:none!important;transform:none!important}
+  .tool-chip::before{transition:none!important;display:none}
+}
