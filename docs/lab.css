@@ -42,3 +42,10 @@ footer{border-top:1px solid var(--border);display:flex;justify-content:space-bet
 @keyframes checking{to{box-shadow:0 0 19px #d9ff654d;transform:translateY(-4px)}}
 @media(max-width:600px){.network-simulator{height:315px}.sim-device{width:72px;padding:9px 5px}.sim-device span{font-size:9px}.dev-a{left:2%}.dev-b{right:2%}.dev-c{left:3%}.dev-d{right:2%}.sim-hub{width:110px;height:110px}.sim-hub strong{font-size:50px}.network-summary strong{font-size:19px}}
 @media(prefers-reduced-motion:reduce){.module-layout .workspace:hover,.module-layout .controls:hover,.sim-device{transform:none!important;transition:none!important}.sim-device.checking{animation:none!important}}
+
+/* Bonus arcade call-to-action */
+.mini-arcade-link{background:#d9ff65;color:#141e12;border-radius:15px;margin:55px 0 20px;padding:30px;display:flex;justify-content:space-between;gap:24px;align-items:center}
+.mini-arcade-link>div>span{font:500 11px 'DM Mono',monospace}.mini-arcade-link h3{font-size:clamp(25px,3vw,39px);line-height:1.1;letter-spacing:-.06em;margin:12px 0}.mini-arcade-link p{max-width:540px;margin:0;font-size:14px}
+.mini-arcade-link>a{background:#181e17;color:white;padding:17px 21px;border-radius:9px;white-space:nowrap;font:500 12px 'DM Mono',monospace}
+.mini-arcade-link>a:hover{background:#37452a}
+@media(max-width:650px){.mini-arcade-link{flex-direction:column;align-items:stretch;padding:25px}.mini-arcade-link a{text-align:center}}
