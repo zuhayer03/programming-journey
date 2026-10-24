@@ -67,7 +67,7 @@
         <button class="orbit-node orbit-ollama" data-tool="Ollama" type="button" aria-label="Inspect Ollama">OL</button>
       </div>
       <div class="observatory-bottom"><span>BUILD → EXPERIMENT → REFINE</span><span id="tool-count">30+ TOOLS & PLATFORMS</span></div>
-      <div class="tool-inspector" id="tool-inspector" aria-live="polite"><span class="inspector-tag">SELECTED TOOL / 001</span><strong id="inspector-name">Java</strong><p id="inspector-description">Object-oriented programming and algorithm foundations.</p><span class="inspector-foot" id="inspector-category">PROGRAMMING / FOUNDATIONS</span></div>
+      <div class="tool-inspector" id="tool-inspector" aria-live="polite"><span class="inspector-tag">SELECTED TOOL / 001</span><strong id="inspector-name">Java</strong><p id="inspector-description">Object-oriented programming and algorithm foundations.</p><span class="inspector-foot" id="inspector-category">PROGRAMMING / FOUNDATIONS</span><button class="stack-add-btn" id="stack-add" type="button">＋ ADD TO STACK</button></div>
     </div>
     <div class="tool-directory">
       <div class="directory-top"><div><small>YOUR TOOL DIRECTORY</small><h3>Explore the stack<span>✳</span></h3></div><span id="tool-results">0 RESULTS</span></div>
@@ -86,6 +86,27 @@
       <div class="tool-results-grid" id="tool-list" aria-live="polite"></div>
       <noscript><p>My toolkit includes Java, Python, Git, GitHub, VS Code, IntelliJ IDEA, Cursor, GitHub Copilot, Claude Code, Google Antigravity, LangGraph, Google ADK, LiveKit Agents, Browser Use, Composio, Paperclip, Hugging Face, Ollama, Supabase AI, E2B, CodeRabbit, LangSmith, Sentry Seer, Figma, Notion, NotebookLM, Perplexity, LeetCode and NeetCode.</p></noscript>
       <div class="directory-disclaimer"><span>✳</span><p>Some are daily development tools; others are frameworks and platforms I am exploring. Listing a tool doesn't mean claiming expert proficiency.</p></div>
+    </div>
+  </div>
+  <div class="stack-lab" id="stack-lab">
+    <div class="stack-lab-head">
+      <div><span class="stack-kicker">THE STACK ARCHITECT / INTERACTIVE TOOL WORKFLOW</span><h3>BUILD YOUR <em>OWN STACK.</em></h3><p>Explore combinations of tools. Choose a preset or add tools from the universe above to design a workflow you can copy or export.</p></div>
+      <span class="stack-lab-counter" id="stack-count">0 / 7</span>
+    </div>
+    <div class="stack-lab-body">
+      <div class="stack-presets">
+        <span class="stack-mini-label">START WITH A MISSION</span>
+        <button class="stack-preset" type="button" data-stack-preset="java"><span>01</span><strong>JAVA / DSA TRACK</strong><small>Java · Git · IDE · problem solving</small><b>↗</b></button>
+        <button class="stack-preset" type="button" data-stack-preset="agents"><span>02</span><strong>AI AGENT PROTOTYPE</strong><small>Python · LangGraph · models · testing</small><b>↗</b></button>
+        <button class="stack-preset" type="button" data-stack-preset="product"><span>03</span><strong>BUILD A PRODUCT</strong><small>Figma · Python · GitHub · Supabase</small><b>↗</b></button>
+        <p class="stack-note">Experiment ideas only, not a claim that every technology is already used in production.</p>
+      </div>
+      <div class="stack-preview">
+        <div class="stack-preview-header"><span><i class="status-led"></i> YOUR WORKFLOW / PREVIEW</span><span id="stack-label">CUSTOM</span></div>
+        <div id="stack-visual" class="stack-visual" aria-live="polite"><p>Select a mission or add tools above to construct your stack.</p></div>
+        <div class="stack-preview-actions"><button type="button" id="stack-copy">COPY STACK <span>⧉</span></button><button type="button" id="stack-svg">EXPORT SVG <span>↗</span></button><button type="button" id="stack-clear">CLEAR <span>×</span></button></div>
+        <div class="stack-feedback" id="stack-feedback" role="status" aria-live="polite"></div>
+      </div>
     </div>
   </div>
 </section>
