@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0d1513">
+<meta name="description" content="Play Pellet Run — a little keyboard and touch-controlled Pac-Man-inspired maze game in Zuhayer Alam Faiyaz's engineering arcade.">
+<title>Pellet Run — Z✳F Engineering Arcade</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="arcade.css">
+</head>
+<body>
+<a class="skip" href="#game">Skip to game</a>
+<header class="nav"><a href="index.html" class="logo">Z<span>✳</span>F</a><div class="nav-status"><span class="led"></span> ENGINEERING ARCADE / MINI GAME 01</div><a href="lab.html" class="back">← BACK TO THE LAB</a></header>
+<main>
+<section class="intro"><div class="kicker"><span>THE ARCADE / 001</span><span>JAVASCRIPT · CANVAS · PURE FUN</span></div><h1>PELLET<br><em>RUN.</em><span class="asterisk">✳</span></h1><p>Old-school maze chasing with a modern Z✳F skin. Eat the dots, avoid the ghosts, and use the power pellets to turn the tables. Built as a browser-only game.</p></section>
+<section id="game" class="game-shell" aria-label="Playable maze game">
+<div class="game-header"><div class="game-brand"><span class="arcade-glyph">◉</span><div><small>NOW PLAYING</small><strong>PELLET RUN / Z✳F EDITION</strong></div></div><span id="game-state" role="status" aria-live="polite">PRESS START</span></div>
+<div class="game-stage">
+<div class="scoreboard">
+<div><small>SCORE</small><strong id="score">0000</strong></div>
+<div><small>BEST THIS SESSION</small><strong id="best-score">0000</strong></div>
+<div><small>LIVES</small><strong id="lives">♥ ♥ ♥</strong></div>
+<div><small>PELLETS</small><strong id="pellets">—</strong></div>
+</div>
+<div class="canvas-wrap" id="game-frame"><canvas id="maze" width="672" height="480" role="img" aria-label="Pac-Man-inspired maze showing yellow player, teal and pink ghosts, walls and pellets"></canvas><div class="game-overlay" id="game-overlay"><span class="overlay-icon">◉</span><h2 id="overlay-title">READY PLAYER ONE?</h2><p id="overlay-sub">Use arrow keys or WASD. On mobile, tap the directional controls.</p><button id="play-button" class="play-button" type="button">START GAME ↗</button></div></div>
+<div class="game-controls"><div class="dpad" aria-label="Touch movement controls"><span></span><button type="button" class="direction up" data-direction="up" aria-label="Move up">↑</button><span></span><button type="button" class="direction left" data-direction="left" aria-label="Move left">←</button><button type="button" class="direction down" data-direction="down" aria-label="Move down">↓</button><button type="button" class="direction right" data-direction="right" aria-label="Move right">→</button></div><div class="control-info"><button type="button" id="pause-button">PAUSE / RESUME <span>Ⅱ</span></button><button type="button" id="restart-button">RESTART <span>↻</span></button><small>ARROWS / WASD TO MOVE · SPACE TO PAUSE</small></div></div>
+</div>
+<div class="game-bottom"><span><i></i> LOCAL BROWSER GAME / NO LOGIN</span><span>NOT AN OFFICIAL PAC-MAN PRODUCT</span></div>
+</section>
+<section class="end-note"><span>THE CODE BEHIND THE FUN</span><h2>PLAYING IS JUST<br>THE <em>BEGINNING.</em></h2><p>Want to see my actual software projects? They are written in Java and Python, and include code, tests, and instructions to run them.</p><div class="end-actions"><a href="index.html#work">EXPLORE PROJECTS ↗</a><a href="lab.html">BACK TO LAB ↗</a><a href="https://github.com/zuhayer03">GITHUB ↗</a></div></section>
+</main>
+<footer><span>Z✳F / CREATIVE ENGINEERING</span><span>BUILT WITH CURIOSITY.</span><a href="index.html">← PORTFOLIO</a></footer>
+<script src="arcade.js" defer></script>
+</body></html>
