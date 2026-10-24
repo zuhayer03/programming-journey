@@ -42,7 +42,7 @@ jobs:
 
           root = Path("docs")
           pages = [root / "index.html", root / "lab.html", root / "arcade.html", root / "constellation.html"]
-          required = {"index.html": ["hero-webgl", "tool-list", "tool-search", "tool-inspector", "command-palette", "project-theater", "open-theater", "theater-next", "theater-prev"], "lab.html": ["sort-bars", "event-stream", "budget-remaining", "network-simulator", "net-run"], "arcade.html": ["maze", "score", "game-overlay", "play-button", "restart-button", "pause-button"], "constellation.html": ["art-canvas", "export-svg", "reset-preset", "paint-status"]}
+          required = {"index.html": ["hero-webgl", "tool-list", "tool-search", "tool-inspector", "stack-lab", "stack-add", "stack-visual", "stack-copy", "stack-svg", "stack-clear", "stack-count", "command-palette", "project-theater", "open-theater", "theater-next", "theater-prev"], "lab.html": ["sort-bars", "event-stream", "budget-remaining", "network-simulator", "net-run"], "arcade.html": ["maze", "score", "game-overlay", "play-button", "restart-button", "pause-button"], "constellation.html": ["art-canvas", "export-svg", "reset-preset", "paint-status"]}
           class Reader(HTMLParser):
               def __init__(self):
                   super().__init__()
@@ -76,4 +76,14 @@ jobs:
                   if not parsed.path and parsed.fragment:
                       assert parsed.fragment in p.ids, f"{page}: missing anchor {ref}"
               print(f"PASS: {page} ({len(p.ids)} IDs, {len(p.refs)} links/assets)")
+          # Ensure the code-defined tool catalog and icon mapping stay aligned.
+          import re
+          source = (root / "universe.js").read_text(encoding="utf-8")
+          tool_names = re.findall(r'^\s*\["([^"]+)","(?:core|coding|agents|infra|quality|creative|practice)",', source, flags=re.M)
+          logo_block = source.split("const logoSources=", 1)[1].split("};", 1)[0]
+          mapped_names = re.findall(r'^\s*"([^"]+)":', logo_block, flags=re.M)
+          assert len(tool_names) == 29, f"Expected 29 tools; got {len(tool_names)}"
+          assert set(tool_names) == set(mapped_names), f"Icon mapping mismatch: missing {set(tool_names)-set(mapped_names)}"
+          assert "function renderStack()" in source, "Missing Stack Architect interaction"
+          print(f"PASS: {len(tool_names)} tools mapped, Stack Architect present")
           PY
