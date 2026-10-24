@@ -196,3 +196,22 @@ footer{padding:25px 3.5vw;display:flex;justify-content:space-between;gap:20px;fo
 @media(max-width:860px){.theater-main{grid-template-columns:1fr}.theater-visual{min-height:330px}.theater-description h2{font-size:clamp(55px,9vw,85px)}.theater-description{min-height:365px}.theater-shell{padding:18px}.theater-main{padding-top:5px}.theater-visual-index{bottom:12px}.theater-plane{inset:0}.theater-main{gap:10px}}
 @media(max-width:530px){.theater-brand small{display:none}.theater-label{display:none}.theater-description h2{font-size:55px}.theater-description{min-height:400px;padding:18px 2px 12px}.theater-visual{min-height:260px}.theater-shortcut{line-height:1.7;font-size:9px}.theater-source{font-size:10px}.theater-meta{flex-direction:column;gap:0}.theater-main{gap:5px}.theater-shell{padding:13px}.theater-heading{padding-bottom:12px}.showcase-intro{gap:10px}.theater-launch{width:100%}}
 @media(prefers-reduced-motion:reduce){.cinema-network-orbit,.cinema-data-bar{animation:none!important}.theater-plane,.theater-visual:hover .theater-plane{transform:none!important;transition:none!important}}
+
+/* BONUS PLAYABLE ARCADE CROSS-LINK */
+.arcade-promo{max-width:1630px;margin:26px 3.5vw 45px;padding:28px 37px;background:#1d2922;color:#edf4e9;border:1px solid #77996b;border-radius:20px;display:flex;align-items:center;gap:30px;box-shadow:11px 16px 0 #a5ca7520}
+.arcade-promo-icon{font-family:var(--mono);display:flex;align-items:center;gap:9px;min-width:183px;color:#d9ff65}
+.arcade-promo-icon>span{font-size:85px;line-height:1;animation:pacmunch 1s steps(2) infinite}
+.arcade-promo-icon>i{font-size:14px;font-style:normal;letter-spacing:.18em}
+.arcade-promo-icon>b{font-size:33px;filter:drop-shadow(3px 4px 0 #0c1713)}
+.arcade-promo-text{flex:1}
+.arcade-promo-text>span{font:500 10px var(--mono);color:#d9ff65}
+.arcade-promo-text h2{font-size:clamp(27px,3.1vw,48px);letter-spacing:-.075em;line-height:1;margin:12px 0}
+.arcade-promo-text h2 em{font-style:normal;color:#d9ff65}
+.arcade-promo-text p{font-size:14px;color:#bfcfc1;max-width:590px;margin:0}
+.arcade-promo-button{flex-shrink:0;display:flex;gap:30px;align-items:center;background:#d9ff65;color:#1a2819;border-radius:40px;padding:16px 20px;font:600 11px var(--mono)}
+.arcade-promo-button span{font-size:19px}
+.arcade-promo-button:hover{background:#f2ffb6;transform:translateY(-2px)}
+@keyframes pacmunch{50%{transform:rotate(-13deg)}}
+@media(max-width:1000px){.arcade-promo{flex-wrap:wrap}.arcade-promo-button{margin-left:auto}}
+@media(max-width:650px){.arcade-promo{margin:20px 17px 35px;padding:25px}.arcade-promo-icon{min-width:0}.arcade-promo-icon>span{font-size:57px}.arcade-promo-icon>b{font-size:25px}.arcade-promo-button{width:100%;justify-content:space-between}}
+@media(prefers-reduced-motion:reduce){.arcade-promo-icon>span{animation:none!important}}
