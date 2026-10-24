@@ -37,6 +37,7 @@ const commands=[
  {label:"Selected Work",detail:"02 / Four projects",href:"#work"},
  {label:"Creative Lab",detail:"03 / Interactive experiments",href:"lab.html"},
  {label:"Playable Arcade",detail:"Bonus / Pellet Run game",href:"arcade.html"},
+ {label:"Contribution Pixel Studio",detail:"Art only / no fake commits",href:"constellation.html"},
  {label:"About",detail:"04 / Backstory",href:"#about"},
  {label:"Tool Universe",detail:"04 / 29 tools + 3D orbit",href:"#tools"},
  {label:"Current Focus",detail:"05 / Learning and co-op",href:"#focus"},
