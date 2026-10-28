@@ -318,3 +318,14 @@ footer{padding:25px 3.5vw;display:flex;justify-content:space-between;gap:20px;fo
   .tool-chip .tool-logo,.orbit-node .orbit-logo{animation:none!important;transform:none!important}
   .tool-chip::before{transition:none!important;display:none}
 }
+
+/* Link to the clean interactive 3D dashboard which mirrors the GitHub GIFs */
+.dashboard-launch-row{display:flex;align-items:center;justify-content:space-between;gap:24px;background:#142339;color:#edf5ff;padding:24px 28px;border-radius:16px;border:1px solid #56708e;margin:24px 0 28px}
+.dashboard-launch-row>div{max-width:640px}
+.dashboard-launch-kicker{font:700 11px var(--mono);color:#aebaff;letter-spacing:.045em}
+.dashboard-launch-row strong{display:block;font-size:25px;letter-spacing:-.05em;margin:8px 0}
+.dashboard-launch-row p{font-size:14px;line-height:1.65;color:#bfd0e2;margin:0}
+.dashboard-launch-row a{display:inline-flex;align-items:center;gap:26px;flex-shrink:0;background:#e5eafd;color:#152238;border-radius:10px;padding:15px 18px;font:700 11px var(--mono)}
+.dashboard-launch-row a:hover{background:#c5cdfd;transform:translateY(-2px)}
+.dashboard-launch-row a span{font-size:21px}
+@media(max-width:800px){.dashboard-launch-row{flex-direction:column;align-items:start}.dashboard-launch-row a{max-width:100%;white-space:normal}}
