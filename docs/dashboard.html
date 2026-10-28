@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111d2d">
+<meta name="description" content="Zuhayer Alam Faiyaz's interactive 3D tool dashboard: 29 authentic development, AI, engineering and design tools in a clean animated portfolio grid.">
+<title>Interactive 3D Tool Dashboard — ZF</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<a class="skip-link" href="#dashboard">Skip to the interactive dashboard</a>
+<header class="site-nav">
+  <a class="wordmark" href="index.html" aria-label="ZF portfolio home">Z<span>✳</span>F</a>
+  <span class="nav-center"><span class="status-light"></span> THE TOOL STUDIO / 29 TOOLS</span>
+  <nav aria-label="Site links"><a href="index.html">Portfolio</a><a href="lab.html">Experiments</a><a href="https://github.com/zuhayer03" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav>
+</header>
+<main>
+<section class="intro">
+ <div class="intro-eyebrow"><span>THE TOOL STUDIO / EDITION 01</span><span>INTERACTIVE 3D · CLEAN MOTION</span></div>
+ <div class="hero-layout">
+  <div><h1>TOOLS.<br><em>IN MOTION.</em></h1>
+  <p>Twenty-nine technologies I use, study, and explore. Click a tool to inspect it. Tilt a card to reveal a little depth. No heavy visual effects—just clean design with a playful edge.</p>
+  <div class="hero-actions"><a class="primary-link" href="#dashboard">EXPLORE ALL 29 <span>↓</span></a><a class="secondary-link" href="index.html#stack-lab">BUILD A CUSTOM STACK ↗</a></div>
+  </div>
+  <div class="hero-object" aria-hidden="true">
+    <div class="hero-tilt" id="hero-tilt">
+      <div class="hero-plate hero-back"></div>
+      <div class="hero-plate hero-middle"><span>UI</span><span>AI</span><span>CODE</span></div>
+      <div class="hero-plate hero-front"><span>Z</span><span>✳</span><span>F</span></div>
+      <div class="hero-floating-pill p1">29 TOOLS</div><div class="hero-floating-pill p2">7 CATEGORIES</div>
+    </div>
+  </div>
+ </div>
+</section>
+<section class="studio" id="dashboard" aria-label="Interactive tool cards">
+ <div class="studio-heading"><div><div class="small-overline">01 — LIVE TOOL DIRECTORY</div><h2>YOUR DIGITAL <em>TOOLKIT.</em></h2><p>A two-column view of the original seven groups, a stack architect, and a development pipeline.</p></div>
+ <div class="studio-count"><strong>29</strong><span>tools and<br>platforms</span></div></div>
+ <div class="studio-controls"><label class="search-label" for="tool-filter">FIND A TOOL</label><input type="search" id="tool-filter" placeholder="Search Java, Cursor, LangGraph..." autocomplete="off" aria-label="Search tools across cards"><button id="reset-view" type="button">RESET VIEW ↺</button><span id="search-result" role="status" aria-live="polite">ALL 29 DISPLAYED</span></div>
+ <div class="dashboard-grid" id="dashboard-grid">
+  <noscript><p>Enable JavaScript to explore the 3D tool dashboard, or <a href="https://github.com/zuhayer03">view the GitHub profile</a> for the GIF version.</p></noscript>
+ </div>
+</section>
+<section class="showcase-note">
+  <div><span>BUILT FOR TWO DIFFERENT PLACES</span><h2>ANIMATED ON GITHUB.<br><em>INTERACTIVE HERE.</em></h2><p>GitHub README pages don't run JavaScript. On GitHub, this same clean layout is presented through animated GIFs. Here you can rotate the cards, select individual tools, use search and follow links.</p></div>
+  <a href="https://github.com/zuhayer03" class="secondary-link">VIEW THE GITHUB VERSION ↗</a>
+</section>
+</main>
+<dialog id="tool-dialog" class="tool-dialog" aria-labelledby="dialog-title">
+ <div class="dialog-content">
+  <button id="dialog-close" type="button" class="dialog-close" aria-label="Close details">✕</button>
+  <div id="dialog-image" class="dialog-image"></div>
+  <span class="dialog-kicker" id="dialog-category">TOOL / INSPECT</span>
+  <h2 id="dialog-title">Tool</h2>
+  <p id="dialog-text">Description</p>
+  <div class="dialog-actions"><a id="dialog-visit" href="https://github.com" rel="noopener noreferrer" target="_blank">VISIT TOOL WEBSITE ↗</a><a href="index.html#stack-lab" class="dialog-secondary">OPEN STACK ARCHITECT ↗</a></div>
+ </div>
+</dialog>
+<footer><span>ZF / CREATIVE ENGINEERING</span><span>29 TOOLS / ORIGINAL LOGOS / CLEAN INTERACTIONS</span><a href="index.html">← BACK TO PORTFOLIO</a></footer>
+<script src="dashboard.js" defer></script>
+</body>
+</html>
