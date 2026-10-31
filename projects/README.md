@@ -12,6 +12,14 @@
 
 Each project links to its source code, instructions and tests. The animated cards illustrate the projects; they are not recordings of production software.
 
+<div align="center">
+
+<a href="../README.md"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/demos/project-reel.png"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/demos/project-reel.gif" width="100%" alt="A looping original reel of Network Monitor, Finance Tracker, AlgoArena and ThreatTrace concepts"/></picture></a>
+
+<sub>An illustrated animation of sample project concepts, not real-time outputs.</sub>
+
+</div>
+
 <table width="100%">
 <tr><td width="50%" valign="top">
 <a href="network-monitor/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/feature-network-monitor.svg"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/animated/network-monitor.gif" width="100%" alt="Network Monitor project illustration"/></picture></a>
