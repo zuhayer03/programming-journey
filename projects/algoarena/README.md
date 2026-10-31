@@ -32,6 +32,12 @@ java AlgoArenaTest
 
 **Output:** Console sorting comparisons and timing output
 
+### See the idea in motion
+
+<picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/demos/sorting.png"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/demos/sorting.gif" width="100%" alt="Bubble Sort swaps using sample input values: an animated sample project walkthrough"/></picture>
+
+<sub>Illustrative animation using sample data — not a recording of a running application. See the real commands and tests above.</sub>
+
 ## How it works
 
 ```text
