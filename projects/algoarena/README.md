@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="../../assets/cards/algoarena.svg" width="100%" alt="AlgoArena — Algorithm Racing Simulator original project banner" />
+<picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/feature-algoarena.svg"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/animated/algoarena.gif" width="100%" alt="algoarena original animated project illustration"/></picture>
 
 **In development** · Java / JDK · [← All projects](../README.md) · [↗ Developer profile](https://github.com/zuhayer03)
 
