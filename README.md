@@ -74,10 +74,7 @@ The [**Creative Engineering Lab**](https://zuhayer03.github.io/programming-journ
 
 Choose a project, open its folder, and follow its README. For example:
 
-<table width="100%">
-<tr><td width="50%" valign="top">
-
-**Python**
+**Try Network Monitor (Python)**
 
 ```bash
 cd projects/network-monitor
@@ -85,18 +82,13 @@ python monitor.py
 python -m unittest discover -p 'test_*.py'
 ```
 
-</td><td width="50%" valign="top">
-
-**Java**
+**Try ThreatTrace (Java)**
 
 ```bash
 cd projects/threattrace
 javac ThreatTrace.java ThreatTraceTest.java
 java ThreatTraceTest
 ```
-
-</td></tr>
-</table>
 
 Open any project directory and follow its own README. The Java projects require a JDK; the Python programs use the standard library. Tests are kept with the projects, and the GitHub Actions badges above show the latest checks.
 
