@@ -1,43 +1,46 @@
 <div align="center">
 
-# Z // SIGNAL · PROJECT ARCHIVE
+# Selected Projects
 
-**Four projects. Two languages. Practical learning.**
+**Four projects. Two languages. Built to learn.**
 
-[![Project Test Status](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml/badge.svg)](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml)
+[**← Programming Journey**](../README.md) &nbsp; · &nbsp; [**Portfolio ↗**](https://zuhayer03.github.io/programming-journey/) &nbsp; · &nbsp; [**Interactive Lab ↗**](https://zuhayer03.github.io/programming-journey/lab.html)
 
-[← Portfolio home](../README.md) · [↗ Public website](https://zuhayer03.github.io/programming-journey/) · [↗ GitHub profile](https://github.com/zuhayer03)
+[![Project tests](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml/badge.svg)](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml)
 
 </div>
 
-### 01 · Network Monitor
+Each project links to its source code, instructions and tests. The animated cards illustrate the projects; they are not recordings of production software.
 
-<a href="network-monitor/"><img width="100%" src="../assets/cards/network-monitor.svg" alt="Network Monitor project banner"/></a>
+<table width="100%">
+<tr><td width="50%" valign="top">
+<a href="network-monitor/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/feature-network-monitor.svg"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/animated/network-monitor.gif" width="100%" alt="Network Monitor project illustration"/></picture></a>
+<p><strong>Network Monitor</strong> · <sub>Python · Networking</sub></p>
+<p><sub>Working student project · TCP connection checks, connection times, CSV/JSON reporting</sub></p>
+<a href="network-monitor/"><strong>Code, tests and run instructions →</strong></a>
+</td><td width="50%" valign="top">
+<a href="finance-tracker/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/feature-finance-tracker.svg"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/animated/finance-tracker.gif" width="100%" alt="Finance Tracker project illustration"/></picture></a>
+<p><strong>Finance Tracker</strong> · <sub>Python · Utilities</sub></p>
+<p><sub>Working student project · Local budget summaries and SVG spending charts</sub></p>
+<a href="finance-tracker/"><strong>Code, tests and run instructions →</strong></a>
+</td></tr>
+<tr><td width="50%" valign="top">
+<a href="algoarena/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/feature-algoarena.svg"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/animated/algoarena.gif" width="100%" alt="AlgoArena project illustration"/></picture></a>
+<p><strong>AlgoArena</strong> · <sub>Java · Algorithms</sub></p>
+<p><sub>In development · Three sorting algorithms, correctness tests, educational timing</sub></p>
+<a href="algoarena/"><strong>Code, tests and run instructions →</strong></a>
+</td><td width="50%" valign="top">
+<a href="threattrace/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/feature-threattrace.svg"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/animated/threattrace.gif" width="100%" alt="ThreatTrace project illustration"/></picture></a>
+<p><strong>ThreatTrace</strong> · <sub>Java · Security</sub></p>
+<p><sub>Functional prototype · Threshold alerts from synthetic login events</sub></p>
+<a href="threattrace/"><strong>Code, tests and run instructions →</strong></a>
+</td></tr>
+</table>
 
-**[Open source and tests →](network-monitor/)** · Python · TCP connection checking and CSV/JSON reports · Working student project
+### Try the browser experiments
 
-### 02 · Finance Tracker
-
-<a href="finance-tracker/"><img width="100%" src="../assets/cards/finance-tracker.svg" alt="Finance Tracker project banner"/></a>
-
-**[Open source and tests →](finance-tracker/)** · Python · Category expenses, budgets, and SVG spending chart · Working student project
-
-### 03 · AlgoArena
-
-<a href="algoarena/"><img width="100%" src="../assets/cards/algoarena.svg" alt="AlgoArena project banner"/></a>
-
-**[Open source and tests →](algoarena/)** · Java · Three sorting methods and educational timing comparisons · In development
-
-### 04 · ThreatTrace
-
-<a href="threattrace/"><img width="100%" src="../assets/cards/threattrace.svg" alt="ThreatTrace project banner"/></a>
-
-**[Open source and tests →](threattrace/)** · Java · Synthetic login-event log parsing and failed-login thresholds · Functional prototype
+The [**interactive lab**](https://zuhayer03.github.io/programming-journey/lab.html) includes educational JavaScript demos inspired by these projects: sorting, fictional TCP checks, synthetic login events and sample budgeting. The original Java/Python programs remain in the folders linked above.
 
 ---
 
-### Notes for reviewers
-
-All four folders include code, setup instructions and test files. **These are educational console programs, not deployed products.** AlgoArena's richer visual simulator is future work; ThreatTrace runs against synthetic data rather than a live security feed. Python monitor probes only configured TCP services, not general ICMP hosts. This distinction is important.
-
-[← Back to programming-journey](../README.md)
+<sub>These are educational programs with known limitations. No production network monitoring, banking access or live threat intelligence is claimed.</sub>
