@@ -32,6 +32,12 @@ java ThreatTraceTest
 
 **Output:** Console summaries and rule-based alerts
 
+### See the idea in motion
+
+<picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/demos/security.png"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/demos/security.gif" width="100%" alt="Synthetic failed logins triggering a three-attempt threshold alert: an animated sample project walkthrough"/></picture>
+
+<sub>Illustrative animation using sample data — not a recording of a running application. See the real commands and tests above.</sub>
+
 ## How it works
 
 ```text
