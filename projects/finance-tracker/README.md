@@ -31,6 +31,12 @@ python -m unittest discover -p 'test_*.py'
 
 **Output:** `output/spending.svg`
 
+### See the idea in motion
+
+<picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/demos/finance.png"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/demos/finance.gif" width="100%" alt="Illustrative category spending and local-budget chart: an animated sample project walkthrough"/></picture>
+
+<sub>Illustrative animation using sample data — not a recording of a running application. See the real commands and tests above.</sub>
+
 ## How it works
 
 ```text
