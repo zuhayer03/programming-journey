@@ -1,10 +1,10 @@
 <div align="center">
 
-<a href="https://github.com/zuhayer03"><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/identity.svg" width="100%" alt="Zuhayer Alam Faiyaz — creative engineering profile artwork"/></a>
+<a href="https://github.com/zuhayer03"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/identity.svg"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/animated/identity.gif?v=studio" width="100%" alt="Zuhayer Alam Faiyaz — creative engineering studio"/></picture></a>
 
 # Programming Journey
 
-**Small builds. Real source code. Room to grow.**
+**A small, evolving collection of useful software.**
 
 Computer Science at Kettering University · Java, Python, systems and creative engineering
 
@@ -18,7 +18,7 @@ Computer Science at Kettering University · Java, Python, systems and creative e
 
 ---
 
-### 01 / Featured projects
+### 01 / The projects
 
 A collection of practical student projects in **networking, finance, algorithms, and security**. Each project has readable source code and instructions to run or test it. The illustrations are animated, but the project descriptions refer to the actual implementations.
 
@@ -53,13 +53,13 @@ A collection of practical student projects in **networking, finance, algorithms,
 </tr>
 </table>
 
-### 02 / Try the ideas in your browser
+### 02 / Try it in your browser
 
 The [**Creative Engineering Lab**](https://zuhayer03.github.io/programming-journey/lab.html) includes four independent interactive demos: sorting operations, fictional network checks, synthetic login events, and a sample budget. These browser experiments illustrate ideas from the projects above; they are not the same programs as the Java/Python command-line implementations.
 
 [Launch the Lab →](https://zuhayer03.github.io/programming-journey/lab.html) · [Explore the 29-tool dashboard →](https://zuhayer03.github.io/programming-journey/dashboard.html)
 
-### 03 / Navigate the repository
+### 03 / Find your way around
 
 | Start here | What's inside |
 |:--|:--|
@@ -71,6 +71,32 @@ The [**Creative Engineering Lab**](https://zuhayer03.github.io/programming-journ
 | [**LEARNING_LOG.md**](LEARNING_LOG.md) | Notes on the learning process |
 
 ### 04 / Run it yourself
+
+Choose a project, open its folder, and follow its README. For example:
+
+<table width="100%">
+<tr><td width="50%" valign="top">
+
+**Python**
+
+```bash
+cd projects/network-monitor
+python monitor.py
+python -m unittest discover -p 'test_*.py'
+```
+
+</td><td width="50%" valign="top">
+
+**Java**
+
+```bash
+cd projects/threattrace
+javac ThreatTrace.java ThreatTraceTest.java
+java ThreatTraceTest
+```
+
+</td></tr>
+</table>
 
 Open any project directory and follow its own README. The Java projects require a JDK; the Python programs use the standard library. Tests are kept with the projects, and the GitHub Actions badges above show the latest checks.
 
