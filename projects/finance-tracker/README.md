@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="../../assets/cards/finance-tracker.svg" width="100%" alt="Finance Tracker original project banner" />
+<picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/feature-finance-tracker.svg"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/animated/finance-tracker.gif" width="100%" alt="finance-tracker original animated project illustration"/></picture>
 
 **Working student project** · Python · [← All projects](../README.md) · [↗ Developer profile](https://github.com/zuhayer03)
 
