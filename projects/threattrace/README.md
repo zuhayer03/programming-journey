@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="../../assets/cards/threattrace.svg" width="100%" alt="ThreatTrace — Java Security Log Analyzer original project banner" />
+<picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/feature-threattrace.svg"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/animated/threattrace.gif" width="100%" alt="threattrace original animated project illustration"/></picture>
 
 **Functional prototype** · Java / JDK · [← All projects](../README.md) · [↗ Developer profile](https://github.com/zuhayer03)
 
