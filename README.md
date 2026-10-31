@@ -65,7 +65,7 @@ A collection of practical student projects in **networking, finance, algorithms,
 
 The [**Creative Engineering Lab**](https://zuhayer03.github.io/programming-journey/lab.html) includes four independent interactive demos: sorting operations, fictional network checks, synthetic login events, and a sample budget. These browser experiments illustrate ideas from the projects above; they are not the same programs as the Java/Python command-line implementations.
 
-[Launch the Lab →](https://zuhayer03.github.io/programming-journey/lab.html) · [Explore the 29-tool dashboard →](https://zuhayer03.github.io/programming-journey/dashboard.html)
+[Launch the Lab →](https://zuhayer03.github.io/programming-journey/lab.html) · [Explore the 29-tool dashboard →](https://zuhayer03.github.io/programming-journey/dashboard.html) · [Watch the full GIF gallery →](MOTION_GALLERY.md)
 
 ### 03 / Find your way around
 
