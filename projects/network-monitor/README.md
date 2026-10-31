@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="../../assets/cards/network-monitor.svg" width="100%" alt="Network Monitor original project banner" />
+<picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/feature-network-monitor.svg"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/animated/network-monitor.gif" width="100%" alt="network-monitor original animated project illustration"/></picture>
 
 **Working student project** · Python 3.9+ · [← All projects](../README.md) · [↗ Developer profile](https://github.com/zuhayer03)
 
