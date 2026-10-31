@@ -4,7 +4,7 @@
 
 **Four projects. Two languages. Built to learn.**
 
-[**← Programming Journey**](../README.md) &nbsp; · &nbsp; [**Portfolio ↗**](https://zuhayer03.github.io/programming-journey/) &nbsp; · &nbsp; [**Interactive Lab ↗**](https://zuhayer03.github.io/programming-journey/lab.html)
+[**← Programming Journey**](../README.md) &nbsp; · &nbsp; [**Motion Gallery ↗**](../MOTION_GALLERY.md) &nbsp; · &nbsp; [**Portfolio ↗**](https://zuhayer03.github.io/programming-journey/) &nbsp; · &nbsp; [**Interactive Lab ↗**](https://zuhayer03.github.io/programming-journey/lab.html)
 
 [![Project tests](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml/badge.svg)](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml)
 
