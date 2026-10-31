@@ -30,6 +30,12 @@ python -m unittest discover -p 'test_*.py'
 
 **Output:** `output/latest.csv` and `output/latest.json`
 
+### See the idea in motion
+
+<picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/demos/network.png"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/demos/network.gif" width="100%" alt="Sample TCP checks and report generation: an animated sample project walkthrough"/></picture>
+
+<sub>Illustrative animation using sample data — not a recording of a running application. See the real commands and tests above.</sub>
+
 ## How it works
 
 ```text
