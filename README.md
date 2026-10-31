@@ -1,80 +1,87 @@
 <div align="center">
 
-<a href="https://github.com/zuhayer03"><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/identity.svg" width="100%" alt="Zuhayer Alam Faiyaz creative engineering identity" /></a>
+<a href="https://github.com/zuhayer03"><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/identity.svg" width="100%" alt="Zuhayer Alam Faiyaz — creative engineering profile artwork"/></a>
 
-### PROJECT ARCHIVE / CREATIVE ENGINEERING
+# Programming Journey
 
-**Good design. Real source. Honest scope.**
+**Small builds. Real source code. Room to grow.**
 
-<a href="https://zuhayer03.github.io/programming-journey/"><img src="https://img.shields.io/badge/PORTFOLIO-WEBSITE-191D16?style=for-the-badge&logo=firefoxbrowser&logoColor=D9FF65" alt="Live website"/></a>
-<a href="https://zuhayer03.github.io/programming-journey/lab.html"><img src="https://img.shields.io/badge/INTERACTIVE-THE_LAB-191D16?style=for-the-badge&logo=github&logoColor=D9FF65" alt="Creative engineering lab"/></a>
-<a href="projects/"><img src="https://img.shields.io/badge/PROJECTS-ALL_FOUR-191D16?style=for-the-badge&logo=github&logoColor=D9FF65" alt="Four verified project folders"/></a>
+Computer Science at Kettering University · Java, Python, systems and creative engineering
 
-<br/><br/>
+[**Portfolio ↗**](https://zuhayer03.github.io/programming-journey/) &nbsp; · &nbsp; [**Interactive Lab ↗**](https://zuhayer03.github.io/programming-journey/lab.html) &nbsp; · &nbsp; [**3D Tool Dashboard ↗**](https://zuhayer03.github.io/programming-journey/dashboard.html) &nbsp; · &nbsp; [**GitHub Profile ↗**](https://github.com/zuhayer03)
 
-[![Project Tests](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml/badge.svg)](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml)
-[![Site Quality](https://github.com/zuhayer03/programming-journey/actions/workflows/site-quality.yml/badge.svg)](https://github.com/zuhayer03/programming-journey/actions/workflows/site-quality.yml)
-[![Pages](https://github.com/zuhayer03/programming-journey/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/zuhayer03/programming-journey/actions/workflows/deploy-pages.yml)
+[![Project tests](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml/badge.svg)](https://github.com/zuhayer03/programming-journey/actions/workflows/portfolio-tests.yml)
+[![Site quality](https://github.com/zuhayer03/programming-journey/actions/workflows/site-quality.yml/badge.svg)](https://github.com/zuhayer03/programming-journey/actions/workflows/site-quality.yml)
+[![Deploy](https://github.com/zuhayer03/programming-journey/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/zuhayer03/programming-journey/actions/workflows/deploy-pages.yml)
 
 </div>
 
-## WHAT IS THIS?
+---
 
-I'm **Zuhayer Alam Faiyaz**, a Kettering University CS student with prior experience in IT support and network infrastructure. This is my public workspace for learning, building, and improving software.
+### 01 / Featured projects
 
-I've kept the project descriptions grounded: these are educational student applications with source code and tests, not production services.
+A collection of practical student projects in **networking, finance, algorithms, and security**. Each project has readable source code and instructions to run or test it. The illustrations are animated, but the project descriptions refer to the actual implementations.
 
-<div align="center"><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/project-panels.svg" width="100%" alt="Four custom illustrated project previews" /></div>
+<table width="100%">
+<tr>
+<td width="50%" valign="top">
+<a href="projects/network-monitor/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/feature-network-monitor.svg"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/animated/network-monitor.gif" width="100%" alt="Network Monitor: Python · TCP connectivity checks, connection-time measurements, CSV/JSON reports"/></picture></a>
+<sub><strong>Working student project</strong> · Python · TCP connectivity checks, connection-time measurements, CSV/JSON reports</sub>
 
-| Build | Technology | Source code | State |
-|:--|:--|:--|:--|
-| **Network Monitor** | Python · TCP connectivity | [Explore →](projects/network-monitor/) | Working project |
-| **Finance Tracker** | Python · CLI budgeting & SVG chart | [Explore →](projects/finance-tracker/) | Working project |
-| **AlgoArena** | Java · Sorting & timing | [Explore →](projects/algoarena/) | In progress |
-| **ThreatTrace** | Java · Synthetic login logs | [Explore →](projects/threattrace/) | Functional prototype |
+<strong><a href="projects/network-monitor/">Explore source & tests →</a></strong>
+</td>
+<td width="50%" valign="top">
+<a href="projects/finance-tracker/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/feature-finance-tracker.svg"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/animated/finance-tracker.gif" width="100%" alt="Finance Tracker: Python · Local budgets, spending summaries and SVG charts"/></picture></a>
+<sub><strong>Working student project</strong> · Python · Local budgets, spending summaries and SVG charts</sub>
 
-### SOMETHING EXTRA: THE CREATIVE ENGINEERING LAB ✳
+<strong><a href="projects/finance-tracker/">Explore source & tests →</a></strong>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="projects/algoarena/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/feature-algoarena.svg"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/animated/algoarena.gif" width="100%" alt="AlgoArena: Java · Sorting-algorithm comparisons and educational timing tests"/></picture></a>
+<sub><strong>In development</strong> · Java · Sorting-algorithm comparisons and educational timing tests</sub>
 
-I built a separate interactive website where you can actually **play with** the concepts behind these projects.
+<strong><a href="projects/algoarena/">Explore source & tests →</a></strong>
+</td>
+<td width="50%" valign="top">
+<a href="projects/threattrace/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/main/assets/feature-threattrace.svg"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/animated/threattrace.gif" width="100%" alt="ThreatTrace: Java · Synthetic login-log analysis and repeated-failure alerts"/></picture></a>
+<sub><strong>Functional prototype</strong> · Java · Synthetic login-log analysis and repeated-failure alerts</sub>
 
-- **Sorting Explorer:** Choose Bubble, Selection, or Insertion Sort and watch array operations.
-- **Auth Event Analyzer:** Flag suspicious patterns in synthetic login events.
-- **Budget Sandbox:** Change fictional expense values and visualize the remaining budget.
-- **Network Simulator:** Explore fictional TCP checks, simulated delays and partial outages.
+<strong><a href="projects/threattrace/">Explore source & tests →</a></strong>
+</td>
+</tr>
+</table>
 
-**[Launch the interactive lab →](https://zuhayer03.github.io/programming-journey/lab.html)**
+### 02 / Try the ideas in your browser
 
-These are independent JavaScript browser demos; my main Java/Python implementations remain in the project folders above.
+The [**Creative Engineering Lab**](https://zuhayer03.github.io/programming-journey/lab.html) includes four independent interactive demos: sorting operations, fictional network checks, synthetic login events, and a sample budget. These browser experiments illustrate ideas from the projects above; they are not the same programs as the Java/Python command-line implementations.
 
-### THE TOOL UNIVERSE / INTERACTIVE 3D
+[Launch the Lab →](https://zuhayer03.github.io/programming-journey/lab.html) · [Explore the 29-tool dashboard →](https://zuhayer03.github.io/programming-journey/dashboard.html)
 
-**[Explore my 29-tool universe →](https://zuhayer03.github.io/programming-journey/#tools)** — a searchable, category-filtered workspace featuring my programming environment, AI coding assistants, agent frameworks, AI infrastructure, review tools, research workflow, and practice platforms. The live website also features an original **WebGL 3D torus-knot identity** with pointer-responsive rotation and motion fallbacks.
+### 03 / Navigate the repository
 
-Tools in the directory include both familiar workflows and technologies I am learning or exploring, rather than a claim of equal proficiency.
-
-## FIND YOUR WAY AROUND
-
-| Folder | What it contains |
+| Start here | What's inside |
 |:--|:--|
-| [`projects/`](projects/) | Four source-code projects with run instructions and tests |
-| [`agent/`](agent/) | ToolPilot — deterministic rule-based Python tool router |
-| [`java/`](java/) and [`dsa/`](dsa/) | Java and algorithms study material |
-| [`python/`](python/) | Python practice |
-| [`docs/`](docs/) | Creative engineering website and interactive lab (HTML / CSS / JS) |
-| [`LEARNING_LOG.md`](LEARNING_LOG.md) | Ongoing learning notes |
+| [**projects/**](projects/) | The four featured student programs, with source, examples and tests |
+| [**agent/**](agent/) | ToolPilot — a deterministic, rule-based Python tool router |
+| [**java/**](java/) · [**dsa/**](dsa/) | Java coursework and algorithm practice |
+| [**python/**](python/) | Python learning exercises |
+| [**docs/**](docs/) | Portfolio site, interactive lab and the tool dashboard |
+| [**LEARNING_LOG.md**](LEARNING_LOG.md) | Notes on the learning process |
 
-## HOW TO EXPLORE THE CODE
+### 04 / Run it yourself
 
-Each project directory includes its own README, source files, sample inputs, and test instructions. The Java projects use a JDK; the Python projects use the standard library. No real bank or security-system connections are made.
+Open any project directory and follow its own README. The Java projects require a JDK; the Python programs use the standard library. Tests are kept with the projects, and the GitHub Actions badges above show the latest checks.
 
-The website is deployed through GitHub Pages. Automated checks validate JavaScript syntax, HTML structure, and local asset links; the project test workflow checks the separate Java and Python student programs.
+**Scope matters:** the budget and security examples use local/sample data, not real banking accounts or live authentication systems. AlgoArena is still in development.
 
 ---
 
 <div align="center">
 
-**Ideas, made real. One small project at a time.**
+*Build thoughtfully. Test what you build. Improve a little every week.*
 
-[GitHub profile](https://github.com/zuhayer03) · [Portfolio](https://zuhayer03.github.io/programming-journey/) · [Interactive lab](https://zuhayer03.github.io/programming-journey/lab.html) · [LinkedIn](https://www.linkedin.com/in/zuhayer-alam-faiyaz-8bb1a3442/)
+[Portfolio](https://zuhayer03.github.io/programming-journey/) · [Source projects](projects/) · [LinkedIn](https://www.linkedin.com/in/zuhayer-alam-faiyaz-8bb1a3442/)
 
 </div>
