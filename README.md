@@ -18,6 +18,14 @@ Computer Science at Kettering University · Java, Python, systems and creative e
 
 ---
 
+<div align="center">
+
+<a href="projects/"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/demos/project-reel.png"/><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/demos/project-reel.gif" width="100%" alt="Animated four-project reel illustrating networks, budgeting, sorting algorithms and synthetic security logs"/></picture></a>
+
+<sub>FOUR PROJECTS · FOUR DIFFERENT PROBLEMS · ONE LEARNING JOURNEY</sub>
+
+</div>
+
 ### 01 / The projects
 
 A collection of practical student projects in **networking, finance, algorithms, and security**. Each project has readable source code and instructions to run or test it. The illustrations are animated, but the project descriptions refer to the actual implementations.
@@ -71,6 +79,13 @@ The [**Creative Engineering Lab**](https://zuhayer03.github.io/programming-journ
 | [**LEARNING_LOG.md**](LEARNING_LOG.md) | Notes on the learning process |
 
 ### 04 / Run it yourself
+
+<details>
+<summary><strong>Watch the development workflow — an original animated GIF</strong></summary>
+
+<div align="center"><img src="https://raw.githubusercontent.com/zuhayer03/zuhayer03/output/build-pipeline.gif" width="100%" alt="An animated illustration of a software project flowing from code through building and testing to delivery"/></div>
+
+</details>
 
 Choose a project, open its folder, and follow its README. For example:
 
